@@ -8,9 +8,11 @@
 <meta content="LICENSED SOFTWARE – A composable framework for quantum-inspired reasoning, entangled memory systems, and multi-agent cooperation. Contact bajpaikrishna715@gmail.com for licensing." name="description"/>
 <meta content="Krishna Bajpai" name="author"/>
 <link href="https://krish567366.github.io/Quantum-Langchain/getting-started/" rel="canonical"/>
+<link href="../architecture/" rel="prev"/>
+<link href="../deployment/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
-<title>🚀 Getting Started with QuantumLangChain - QuantumLangChain</title>
+<title>Getting Started Guide - QuantumLangChain</title>
 <link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -51,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              🚀 Getting Started with QuantumLangChain
+              Getting Started Guide
             
           </span>
 </div>
@@ -227,6 +229,28 @@
       </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../architecture/">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+        
+  
+  
+    
+  
+  Getting Started Guide
+
+      </a>
+</li>
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../deployment/">
         
   
@@ -249,7 +273,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../api/overview/">
+<a class="md-tabs__link" href="../api/">
           
   
   
@@ -441,6 +465,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../concepts/architecture/">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../concepts/quantum-basics/">
 <span class="md-ellipsis">
     Quantum Computing Basics
@@ -534,6 +566,14 @@
 <a class="md-nav__link" href="../modules/quantum-retriever/">
 <span class="md-ellipsis">
     QuantumRetriever
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modules/response-processor/">
+<span class="md-ellipsis">
+    ResponseProcessor
     
   </span>
 </a>
@@ -706,6 +746,301 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Getting Started Guide
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Getting Started Guide
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-start-guide">
+<span class="md-ellipsis">
+      Quick Start Guide
+    </span>
+</a>
+<nav aria-label="Quick Start Guide" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites">
+<span class="md-ellipsis">
+      📋 Prerequisites
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+<span class="md-ellipsis">
+      🛠️ Installation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-setup">
+<span class="md-ellipsis">
+      🔑 License Setup
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-first-quantum-chain">
+<span class="md-ellipsis">
+      🎯 Your First Quantum Chain
+    </span>
+</a>
+<nav aria-label="🎯 Your First Quantum Chain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-example">
+<span class="md-ellipsis">
+      Basic Example
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enhanced-example-with-memory">
+<span class="md-ellipsis">
+      Enhanced Example with Memory
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#architecture-overview">
+<span class="md-ellipsis">
+      🏗️ Architecture Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-concepts">
+<span class="md-ellipsis">
+      📚 Core Concepts
+    </span>
+</a>
+<nav aria-label="📚 Core Concepts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-enhanced-reasoning">
+<span class="md-ellipsis">
+      Quantum-Enhanced Reasoning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components">
+<span class="md-ellipsis">
+      Key Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-use-cases">
+<span class="md-ellipsis">
+      🎨 Common Use Cases
+    </span>
+</a>
+<nav aria-label="🎨 Common Use Cases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-enhanced-question-answering">
+<span class="md-ellipsis">
+      1. Enhanced Question Answering
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-creative-content-generation">
+<span class="md-ellipsis">
+      2. Creative Content Generation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-multi-agent-problem-solving">
+<span class="md-ellipsis">
+      3. Multi-Agent Problem Solving
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-retrieval-augmented-generation">
+<span class="md-ellipsis">
+      4. Retrieval-Augmented Generation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-guide">
+<span class="md-ellipsis">
+      ⚙️ Configuration Guide
+    </span>
+</a>
+<nav aria-label="⚙️ Configuration Guide" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend-configuration">
+<span class="md-ellipsis">
+      Backend Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-configuration">
+<span class="md-ellipsis">
+      Memory Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#best-practices">
+<span class="md-ellipsis">
+      🚦 Best Practices
+    </span>
+</a>
+<nav aria-label="🚦 Best Practices" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-start-simple">
+<span class="md-ellipsis">
+      1. Start Simple
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-handle-errors-gracefully">
+<span class="md-ellipsis">
+      2. Handle Errors Gracefully
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-optimize-performance">
+<span class="md-ellipsis">
+      3. Optimize Performance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-monitor-resource-usage">
+<span class="md-ellipsis">
+      4. Monitor Resource Usage
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting">
+<span class="md-ellipsis">
+      🔧 Troubleshooting
+    </span>
+</a>
+<nav aria-label="🔧 Troubleshooting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-issues">
+<span class="md-ellipsis">
+      Common Issues
+    </span>
+</a>
+<nav aria-label="Common Issues" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-errors">
+<span class="md-ellipsis">
+      License Errors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend-errors">
+<span class="md-ellipsis">
+      Backend Errors
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-errors">
+<span class="md-ellipsis">
+      Memory Errors
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debug-mode">
+<span class="md-ellipsis">
+      Debug Mode
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps">
+<span class="md-ellipsis">
+      📖 Next Steps
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support">
+<span class="md-ellipsis">
+      🆘 Support
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-information">
+<span class="md-ellipsis">
+      🔐 License Information
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/">
 <span class="md-ellipsis">
     Deployment
@@ -722,16 +1057,20 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../api/">
 <span class="md-ellipsis">
     API Reference
     
   </span>
+</a>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_13">
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
 <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
@@ -804,16 +1143,16 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
 <span class="md-ellipsis">
     Development
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_14">
+<nav aria-expanded="false" aria-labelledby="__nav_16_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
 <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -862,16 +1201,16 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
-<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
 <span class="md-ellipsis">
     About
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_15">
+<nav aria-expanded="false" aria-labelledby="__nav_17_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_17">
 <span class="md-nav__icon md-icon"></span>
             About
           </label>
@@ -901,7 +1240,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/faq.md">
+<a class="md-nav__link" href="../about/faq/">
 <span class="md-ellipsis">
     FAQ
     

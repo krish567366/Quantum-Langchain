@@ -8,9 +8,11 @@
 <meta content="LICENSED SOFTWARE – A composable framework for quantum-inspired reasoning, entangled memory systems, and multi-agent cooperation. Contact bajpaikrishna715@gmail.com for licensing." name="description"/>
 <meta content="Krishna Bajpai" name="author"/>
 <link href="https://krish567366.github.io/Quantum-Langchain/architecture/" rel="canonical"/>
+<link href="../best-practices/" rel="prev"/>
+<link href="../getting-started/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
-<title>QuantumLangChain Architecture - QuantumLangChain</title>
+<title>Architecture - QuantumLangChain</title>
 <link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -51,7 +53,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              QuantumLangChain Architecture
+              Architecture
             
           </span>
 </div>
@@ -226,6 +228,28 @@
 
       </a>
 </li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../getting-started/">
+        
+  
+  
+    
+  
+  Getting Started Guide
+
+      </a>
+</li>
 <li class="md-tabs__item">
 <a class="md-tabs__link" href="../deployment/">
         
@@ -249,7 +273,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../api/overview/">
+<a class="md-tabs__link" href="../api/">
           
   
   
@@ -441,6 +465,14 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../concepts/architecture/">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../concepts/quantum-basics/">
 <span class="md-ellipsis">
     Quantum Computing Basics
@@ -534,6 +566,14 @@
 <a class="md-nav__link" href="../modules/quantum-retriever/">
 <span class="md-ellipsis">
     QuantumRetriever
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../modules/response-processor/">
+<span class="md-ellipsis">
+    ResponseProcessor
     
   </span>
 </a>
@@ -705,6 +745,370 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-components">
+<span class="md-ellipsis">
+      Core Components
+    </span>
+</a>
+<nav aria-label="Core Components" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-quantumbase-class">
+<span class="md-ellipsis">
+      1. QuantumBase Class
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-quantum-state-management">
+<span class="md-ellipsis">
+      2. Quantum State Management
+    </span>
+</a>
+<nav aria-label="2. Quantum State Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-states">
+<span class="md-ellipsis">
+      Quantum States
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decoherence-tracking">
+<span class="md-ellipsis">
+      Decoherence Tracking
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-backend-architecture">
+<span class="md-ellipsis">
+      3. Backend Architecture
+    </span>
+</a>
+<nav aria-label="3. Backend Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstract-backend-interface">
+<span class="md-ellipsis">
+      Abstract Backend Interface
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backend-implementations">
+<span class="md-ellipsis">
+      Backend Implementations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-principles">
+<span class="md-ellipsis">
+      Design Principles
+    </span>
+</a>
+<nav aria-label="Design Principles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-quantum-coherence-first">
+<span class="md-ellipsis">
+      1. Quantum Coherence First
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-entanglement-as-a-service">
+<span class="md-ellipsis">
+      2. Entanglement as a Service
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-hybrid-classical-quantum-execution">
+<span class="md-ellipsis">
+      3. Hybrid Classical-Quantum Execution
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-architecture">
+<span class="md-ellipsis">
+      Memory Architecture
+    </span>
+</a>
+<nav aria-label="Memory Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-memory-hierarchy">
+<span class="md-ellipsis">
+      Quantum Memory Hierarchy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-types">
+<span class="md-ellipsis">
+      Memory Types
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-architecture">
+<span class="md-ellipsis">
+      Agent Architecture
+    </span>
+</a>
+<nav aria-label="Agent Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#entangled-agent-system">
+<span class="md-ellipsis">
+      Entangled Agent System
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent-communication-protocols">
+<span class="md-ellipsis">
+      Agent Communication Protocols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-store-architecture">
+<span class="md-ellipsis">
+      Vector Store Architecture
+    </span>
+</a>
+<nav aria-label="Vector Store Architecture" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-enhanced-vector-stores">
+<span class="md-ellipsis">
+      Quantum-Enhanced Vector Stores
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#search-algorithms">
+<span class="md-ellipsis">
+      Search Algorithms
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-optimization">
+<span class="md-ellipsis">
+      Performance Optimization
+    </span>
+</a>
+<nav aria-label="Performance Optimization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-circuit-optimization">
+<span class="md-ellipsis">
+      Quantum Circuit Optimization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decoherence-mitigation">
+<span class="md-ellipsis">
+      Decoherence Mitigation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scalability-patterns">
+<span class="md-ellipsis">
+      Scalability Patterns
+    </span>
+</a>
+<nav aria-label="Scalability Patterns" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#horizontal-scaling">
+<span class="md-ellipsis">
+      Horizontal Scaling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vertical-scaling">
+<span class="md-ellipsis">
+      Vertical Scaling
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#security-and-privacy">
+<span class="md-ellipsis">
+      Security and Privacy
+    </span>
+</a>
+<nav aria-label="Security and Privacy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-cryptography">
+<span class="md-ellipsis">
+      Quantum Cryptography
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#privacy-preserving-quantum-computing">
+<span class="md-ellipsis">
+      Privacy-Preserving Quantum Computing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-handling-and-recovery">
+<span class="md-ellipsis">
+      Error Handling and Recovery
+    </span>
+</a>
+<nav aria-label="Error Handling and Recovery" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-error-correction">
+<span class="md-ellipsis">
+      Quantum Error Correction
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fallback-mechanisms">
+<span class="md-ellipsis">
+      Fallback Mechanisms
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-extensions">
+<span class="md-ellipsis">
+      Future Extensions
+    </span>
+</a>
+<nav aria-label="Future Extensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#planned-features">
+<span class="md-ellipsis">
+      Planned Features
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#research-directions">
+<span class="md-ellipsis">
+      Research Directions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-patterns">
+<span class="md-ellipsis">
+      Integration Patterns
+    </span>
+</a>
+<nav aria-label="Integration Patterns" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#langchain-integration">
+<span class="md-ellipsis">
+      LangChain Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#framework-interoperability">
+<span class="md-ellipsis">
+      Framework Interoperability
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../getting-started/">
+<span class="md-ellipsis">
+    Getting Started Guide
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../deployment/">
 <span class="md-ellipsis">
@@ -722,16 +1126,20 @@
 </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_13" type="checkbox"/>
-<label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../api/">
 <span class="md-ellipsis">
     API Reference
     
   </span>
+</a>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_13_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_13">
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
 <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
@@ -804,16 +1212,16 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_14" type="checkbox"/>
-<label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
 <span class="md-ellipsis">
     Development
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_14_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_14">
+<nav aria-expanded="false" aria-labelledby="__nav_16_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
 <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -862,16 +1270,16 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
-<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
 <span class="md-ellipsis">
     About
     
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_15">
+<nav aria-expanded="false" aria-labelledby="__nav_17_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_17">
 <span class="md-nav__icon md-icon"></span>
             About
           </label>
@@ -901,7 +1309,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/faq.md">
+<a class="md-nav__link" href="../about/faq/">
 <span class="md-ellipsis">
     FAQ
     
