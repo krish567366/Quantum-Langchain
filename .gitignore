@@ -1,0 +1,7 @@
+quantumlangchain/
+*.egg-info/
+*.egg
+*.pyc
+__pycache__/
+build/
+dist/
