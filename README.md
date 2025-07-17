@@ -22,20 +22,8 @@
 1. **Install**: `pip install quantumlangchain`
 2. **Import**: Automatically starts 24-hour evaluation
 3. **Get Machine ID**: `python -c "import quantumlangchain; print(quantumlangchain.get_machine_id())"`
-4. **Contact**: Email bajpaikrishna715@gmail.com with your machine ID
+4. **Contact**: Email [bajpaikrishna715@gmail.com](mailto:bajpaikrishna715@gmail.com) with your machine ID
 5. **Activate**: Receive and activate your license file
-
-### License Tiers
-
-| Tier | Price | Features | Operations/Day |
-|------|-------|----------|----------------|
-| 🆓 **Evaluation** | Free (24 hours) | Basic features only | 1,000 |
-| 💼 **Basic** | $29/month | Core + Chains + Memory | 10,000 |
-| 🚀 **Professional** | $99/month | Multi-Agent + Advanced | 100,000 |
-| 🏢 **Enterprise** | $299/month | All features + Support | Unlimited |
-| 🎓 **Research** | $49/month | Academic features | 50,000 |
-
----
 
 ## 🧬 About QuantumLangChain
 

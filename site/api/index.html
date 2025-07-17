@@ -1,0 +1,4703 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LICENSED SOFTWARE – A composable framework for quantum-inspired reasoning, entangled memory systems, and multi-agent cooperation. Contact bajpaikrishna715@gmail.com for licensing.">
+      
+      
+        <meta name="author" content="Krishna Bajpai">
+      
+      
+        <link rel="canonical" href="https://krish567366.github.io/Quantum-Langchain/api/">
+      
+      
+        <link rel="prev" href="../tutorials/">
+      
+      
+        <link rel="next" href="overview/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>API Index - QuantumLangChain</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-6LNSVBM0Z9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-6LNSVBM0Z9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-6LNSVBM0Z9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="QuantumLangChain" class="md-header__button md-logo" aria-label="QuantumLangChain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            QuantumLangChain
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/krish567366/Quantum-Langchain" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    krish567366/Quantum-Langchain
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../licensing/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Licensing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../theory-architecture/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Theory & Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../modules/qlchain/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Core Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../modules/backends/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Backends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../vectorstores/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Vector Stores
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../user-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../best-practices/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Best Practices
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../deployment/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Deployment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tutorials/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tutorials
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../development/contributing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../about/license/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="QuantumLangChain" class="md-nav__button md-logo" aria-label="QuantumLangChain" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    QuantumLangChain
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/krish567366/Quantum-Langchain" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    krish567366/Quantum-Langchain
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Licensing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Licensing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pricing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../licensing/support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Theory & Architecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Theory & Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complete Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/quantum-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Computing Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/quantum-computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Computing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/hybrid-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum-Classical Hybrid Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/entanglement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Entanglement in AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/decoherence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decoherence and Error Correction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/memory-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum Memory Models
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Modules
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Core Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/qlchain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QLChain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/quantum-memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuantumMemory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/entangled-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EntangledAgents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/quantum-retriever/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuantumRetriever
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/response-processor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResponseProcessor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/tool-executor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuantumToolExecutor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/quantum-chains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuantumChain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/prompt-chain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QPromptChain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/context-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QuantumContextManager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Backends
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Backends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/backends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backends/qiskit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qiskit Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backends/pennylane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PennyLane Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backends/braket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Braket Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backends/custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom Backends
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vector Stores
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Vector Stores
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vectorstores/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vectorstores/chromadb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hybrid ChromaDB
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vectorstores/faiss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quantum FAISS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vectorstores/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_15" id="__nav_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Complete API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chains
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="retrievers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Retrievers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backends.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backends
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="licensing.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Licensing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Performance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumBase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumBase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__config-optionalquantumconfig-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(config: Optional[QuantumConfig] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-initialize-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      async initialize() -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-reset_quantum_state-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      async reset_quantum_state() -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_entanglementother-quantumbase-strength-float-08-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_entanglement(other: QuantumBase, strength: float = 0.8) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_decoherencedelta-float-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_decoherence(delta: float) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qlchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      QLChain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QLChain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__memory-quantummemory-backend-quantumbackend-config-optionaldict-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(memory: QuantumMemory, backend: QuantumBackend, config: Optional[Dict] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-aruninput_text-str-kwargs-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async arun(input_text: str, **kwargs) -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-abatchinputs-liststr-kwargs-listdictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async abatch(inputs: List[str], **kwargs) -&gt; List[Dict[str, Any]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-astreaminput_text-str-kwargs-asynciteratordictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async astream(input_text: str, **kwargs) -&gt; AsyncIterator[Dict[str, Any]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_execution_stats-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_execution_stats() -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Memory Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantummemory" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumMemory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumMemory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__classical_dim-int-quantum_dim-int-backend-optionalquantumbackend-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(classical_dim: int, quantum_dim: int, backend: Optional[QuantumBackend] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-storekey-str-value-any-quantum_enhanced-bool-false-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      async store(key: str, value: Any, quantum_enhanced: bool = False) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-retrievekey-str-quantum_search-bool-false-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async retrieve(key: str, quantum_search: bool = False) -&gt; Any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-similarity_searchquery-str-top_k-int-5-listdictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async similarity_search(query: str, top_k: int = 5) -&gt; List[Dict[str, Any]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-entangle_memorieskeys-liststr-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      async entangle_memories(keys: List[str]) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-create_memory_snapshot-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      async create_memory_snapshot() -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-restore_memory_snapshotsnapshot_id-str-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      async restore_memory_snapshot(snapshot_id: str) -&gt; bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-get_stats-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async get_stats() -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entangledagents" class="md-nav__link">
+    <span class="md-ellipsis">
+      EntangledAgents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EntangledAgents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__agent_configs-listdictstr-any-backend-optionalquantumbackend-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(agent_configs: List[Dict[str, Any]], backend: Optional[QuantumBackend] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-collaborative_solveproblem-str-max_iterations-int-5-enable_interference-bool-true-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async collaborative_solve(problem: str, max_iterations: int = 5, enable_interference: bool = True) -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-run_single_agentagent_id-str-problem-str-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async run_single_agent(agent_id: str, problem: str) -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-run_parallel_agentsagent_ids-liststr-problem-str-listdictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async run_parallel_agents(agent_ids: List[str], problem: str) -&gt; List[Dict[str, Any]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-propagate_beliefbelief-beliefstate-listbeliefstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      async propagate_belief(belief: BeliefState) -&gt; List[BeliefState]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_agent_rolerole-agentrole-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_agent_role(role: AgentRole) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_agent_roleagent_id-str-kwargs-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_agent_role(agent_id: str, **kwargs) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_performance_stats-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_performance_stats() -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrievers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrievers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrievers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumretriever" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumRetriever
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumRetriever">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__vectorstore-any-backend-optionalquantumbackend-none-config-optionaldict-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(vectorstore: Any, backend: Optional[QuantumBackend] = None, config: Optional[Dict] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-aretrievequery-str-quantum_enhanced-bool-true-kwargs-listdocument" class="md-nav__link">
+    <span class="md-ellipsis">
+      async aretrieve(query: str, quantum_enhanced: bool = True, **kwargs) -&gt; List[Document]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-asimilarity_searchquery-str-k-int-5-algorithm-str-amplitude_amplification-listtupledocument-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      async asimilarity_search(query: str, k: int = 5, algorithm: str = "amplitude_amplification") -&gt; List[Tuple[Document, float]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_retrieval_stats-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_retrieval_stats() -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-stores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vector Stores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vector Stores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hybridchromadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      HybridChromaDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HybridChromaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__collection_name-str-quantum_documents-persist_directory-optionalstr-none-embedding_function-optionalany-none-config-optionaldict-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(collection_name: str = "quantum_documents", persist_directory: Optional[str] = None, embedding_function: Optional[Any] = None, config: Optional[Dict] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-add_documentsdocuments-liststr-metadatas-optionallistdict-none-ids-optionalliststr-none-embeddings-optionallistlistfloat-none-quantum_enhanced-bool-false-liststr" class="md-nav__link">
+    <span class="md-ellipsis">
+      async add_documents(documents: List[str], metadatas: Optional[List[Dict]] = None, ids: Optional[List[str]] = None, embeddings: Optional[List[List[float]]] = None, quantum_enhanced: bool = False) -&gt; List[str]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-similarity_searchquery-str-k-int-5-filter-optionaldict-none-quantum_enhanced-bool-false-listtuplequantumdocument-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      async similarity_search(query: str, k: int = 5, filter: Optional[Dict] = None, quantum_enhanced: bool = False) -&gt; List[Tuple[QuantumDocument, float]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-entangle_documentsdoc_ids-liststr-entanglement_strength-float-08-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      async entangle_documents(doc_ids: List[str], entanglement_strength: float = 0.8) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-quantum_similarity_searchquery-str-k-int-5-quantum_algorithm-str-amplitude_amplification-listtuplequantumdocument-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      async quantum_similarity_search(query: str, k: int = 5, quantum_algorithm: str = "amplitude_amplification") -&gt; List[Tuple[QuantumDocument, float]]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantumfaiss" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumFAISS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumFAISS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__init__dimension-int-index_type-str-ivfflat-metric-str-l2-nlist-int-100-persist_path-optionalstr-none-config-optionaldict-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__(dimension: int, index_type: str = "IVFFlat", metric: str = "L2", nlist: int = 100, persist_path: Optional[str] = None, config: Optional[Dict] = None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-add_vectorsvectors-unionnpndarray-listlistfloat-ids-optionalliststr-none-metadatas-optionallistdict-none-quantum_enhanced-bool-false-liststr" class="md-nav__link">
+    <span class="md-ellipsis">
+      async add_vectors(vectors: Union[np.ndarray, List[List[float]]], ids: Optional[List[str]] = None, metadatas: Optional[List[Dict]] = None, quantum_enhanced: bool = False) -&gt; List[str]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-searchquery_vector-unionnpndarray-listfloat-k-int-5-quantum_enhanced-bool-false-filter_metadata-optionaldict-none-listtuplestr-float-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      async search(query_vector: Union[np.ndarray, List[float]], k: int = 5, quantum_enhanced: bool = False, filter_metadata: Optional[Dict] = None) -&gt; List[Tuple[str, float, Dict]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-amplitude_amplification_searchquery_vector-unionnpndarray-listfloat-target_condition-callable-k-int-5-iterations-int-3-listtuplestr-float-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      async amplitude_amplification_search(query_vector: Union[np.ndarray, List[float]], target_condition: Callable, k: int = 5, iterations: int = 3) -&gt; List[Tuple[str, float, Dict]]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-grovers_searchoracle_function-callable-k-int-5-max_iterations-int-10-listtuplestr-float-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      async grovers_search(oracle_function: Callable, k: int = 5, max_iterations: int = 10) -&gt; List[Tuple[str, float, Dict]]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumtoolexecutor" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumToolExecutor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumToolExecutor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register_toolname-str-function-callable-description-str-quantum_enhanced-bool-false-parallel_execution-bool-false-entanglement_enabled-bool-false-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_tool(name: str, function: Callable, description: str, quantum_enhanced: bool = False, parallel_execution: bool = False, entanglement_enabled: bool = False) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-execute_tooltool_name-str-args-quantum_enhanced-optionalbool-none-kwargs-toolresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      async execute_tool(tool_name: str, *args, quantum_enhanced: Optional[bool] = None, **kwargs) -&gt; ToolResult
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-execute_parallel_toolstool_configs-listdictstr-any-entangle_results-bool-false-listtoolresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      async execute_parallel_tools(tool_configs: List[Dict[str, Any]], entangle_results: bool = False) -&gt; List[ToolResult]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-execute_quantum_superposition_toolstool_configs-listdictstr-any-measurement_function-optionalcallable-none-toolresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      async execute_quantum_superposition_tools(tool_configs: List[Dict[str, Any]], measurement_function: Optional[Callable] = None) -&gt; ToolResult
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_tool_chainchain_name-str-tool_names-liststr-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_tool_chain(chain_name: str, tool_names: List[str]) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-execute_tool_chainchain_name-str-initial_input-any-none-propagate_results-bool-true-listtoolresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      async execute_tool_chain(chain_name: str, initial_input: Any = None, propagate_results: bool = True) -&gt; List[ToolResult]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumcontextmanager" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumContextManager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumContextManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create_context_windowwindow_id-str-max_size-int-100-coherence_threshold-float-08-contextwindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_context_window(window_id: str, max_size: int = 100, coherence_threshold: float = 0.8) -&gt; ContextWindow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-set_contextscope-contextscope-key-str-value-any-quantum_enhanced-bool-false-window_id-optionalstr-none-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      async set_context(scope: ContextScope, key: str, value: Any, quantum_enhanced: bool = False, window_id: Optional[str] = None) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-get_contextscope-contextscope-key-str-default-any-none-quantum_search-bool-false-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async get_context(scope: ContextScope, key: str, default: Any = None, quantum_search: bool = False) -&gt; Any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-create_snapshotscope-contextscope-contextscopesession-include_windows-bool-true-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      async create_snapshot(scope: ContextScope = ContextScope.SESSION, include_windows: bool = True) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-restore_snapshotsnapshot_id-str-bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      async restore_snapshot(snapshot_id: str) -&gt; bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-entangle_contextscontext_keys-listtuplecontextscope-str-entanglement_strength-float-08-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      async entangle_contexts(context_keys: List[Tuple[ContextScope, str]], entanglement_strength: float = 0.8) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qpromptchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      QPromptChain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QPromptChain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add_promptcontent-str-prompt_type-prompttype-prompttypeuser-quantum_weight-float-10-conditions-optionaldict-none-metadata-optionaldict-none-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_prompt(content: str, prompt_type: PromptType = PromptType.USER, quantum_weight: float = 1.0, conditions: Optional[Dict] = None, metadata: Optional[Dict] = None) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_prompt_chainchain_name-str-prompt_ids-liststr-allow_quantum_selection-bool-true-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_prompt_chain(chain_name: str, prompt_ids: List[str], allow_quantum_selection: bool = True) -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_superposition_groupgroup_name-str-prompt_ids-liststr-selection_method-str-quantum_interference-none" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_superposition_group(group_name: str, prompt_ids: List[str], selection_method: str = "quantum_interference") -&gt; None
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-execute_prompt_chainchain_name-str-context-dictstr-any-variables-optionaldictstr-any-none-promptchainresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      async execute_prompt_chain(chain_name: str, context: Dict[str, Any], variables: Optional[Dict[str, Any]] = None) -&gt; PromptChainResult
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entangle_promptsprompt_ids-liststr-entanglement_strength-float-08-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      entangle_prompts(prompt_ids: List[str], entanglement_strength: float = 0.8) -&gt; str
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backends
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumbackend" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumBackend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuantumBackend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#async-execute_circuitcircuit-any-shots-int-1000-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async execute_circuit(circuit: Any, shots: int = 1000) -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-create_entangling_circuitqubits-listint-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      async create_entangling_circuit(qubits: List[int]) -&gt; Any
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_backend_info-dictstr-any" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_backend_info() -&gt; Dict[str, Any]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qiskitbackend" class="md-nav__link">
+    <span class="md-ellipsis">
+      QiskitBackend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pennylanebackend" class="md-nav__link">
+    <span class="md-ellipsis">
+      PennyLaneBackend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#braketbackend" class="md-nav__link">
+    <span class="md-ellipsis">
+      BraketBackend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumConfig
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      ToolResult
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantumstate" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuantumState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contextscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      ContextScope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompttype" class="md-nav__link">
+    <span class="md-ellipsis">
+      PromptType
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+<p>Complete API documentation for QuantumLangChain components.</p>
+<h2 id="core-components">Core Components<a class="headerlink" href="#core-components" title="Permanent link">&para;</a></h2>
+<h3 id="quantumbase">QuantumBase<a class="headerlink" href="#quantumbase" title="Permanent link">&para;</a></h3>
+<p>Base class for all quantum-enhanced components.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumBase</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract base class providing quantum state management.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h4>
+<h5 id="__init__config-optionalquantumconfig-none"><code>__init__(config: Optional[QuantumConfig] = None)</code><a class="headerlink" href="#__init__config-optionalquantumconfig-none" title="Permanent link">&para;</a></h5>
+<p>Initialize quantum component with optional configuration.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>config</code>: Quantum configuration settings</li>
+</ul>
+<h5 id="async-initialize-none"><code>async initialize() -&gt; None</code><a class="headerlink" href="#async-initialize-none" title="Permanent link">&para;</a></h5>
+<p>Initialize quantum state and resources.</p>
+<h5 id="async-reset_quantum_state-none"><code>async reset_quantum_state() -&gt; None</code><a class="headerlink" href="#async-reset_quantum_state-none" title="Permanent link">&para;</a></h5>
+<p>Reset component to coherent quantum state.</p>
+<h5 id="create_entanglementother-quantumbase-strength-float-08-str"><code>create_entanglement(other: QuantumBase, strength: float = 0.8) -&gt; str</code><a class="headerlink" href="#create_entanglementother-quantumbase-strength-float-08-str" title="Permanent link">&para;</a></h5>
+<p>Create quantum entanglement with another component.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>other</code>: Target component for entanglement</li>
+<li><code>strength</code>: Entanglement strength (0.0 to 1.0)</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Entanglement ID string</li>
+</ul>
+<h5 id="update_decoherencedelta-float-none"><code>update_decoherence(delta: float) -&gt; None</code><a class="headerlink" href="#update_decoherencedelta-float-none" title="Permanent link">&para;</a></h5>
+<p>Update decoherence level.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>delta</code>: Decoherence increment</li>
+</ul>
+<h4 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>quantum_state: QuantumState</code> - Current quantum state</li>
+<li><code>decoherence_level: float</code> - Decoherence level (0.0 to 1.0)</li>
+<li><code>entanglement_registry: Dict[str, Any]</code> - Registry of entanglements</li>
+</ul>
+<hr />
+<h2 id="chains">Chains<a class="headerlink" href="#chains" title="Permanent link">&para;</a></h2>
+<h3 id="qlchain">QLChain<a class="headerlink" href="#qlchain" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced reasoning chain with superposition and entanglement.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QLChain</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum-ready chain with parallel execution branches.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h4>
+<h5 id="__init__memory-quantummemory-backend-quantumbackend-config-optionaldict-none"><code>__init__(memory: QuantumMemory, backend: QuantumBackend, config: Optional[Dict] = None)</code><a class="headerlink" href="#__init__memory-quantummemory-backend-quantumbackend-config-optionaldict-none" title="Permanent link">&para;</a></h5>
+<p>Initialize quantum chain.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>memory</code>: Quantum memory system</li>
+<li><code>backend</code>: Quantum computing backend</li>
+<li><code>config</code>: Chain configuration</li>
+</ul>
+<h5 id="async-aruninput_text-str-kwargs-dictstr-any"><code>async arun(input_text: str, **kwargs) -&gt; Dict[str, Any]</code><a class="headerlink" href="#async-aruninput_text-str-kwargs-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Execute chain with quantum enhancement.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input_text</code>: Input query or prompt</li>
+<li><code>**kwargs</code>: Additional execution parameters</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Execution result dictionary</li>
+</ul>
+<h5 id="async-abatchinputs-liststr-kwargs-listdictstr-any"><code>async abatch(inputs: List[str], **kwargs) -&gt; List[Dict[str, Any]]</code><a class="headerlink" href="#async-abatchinputs-liststr-kwargs-listdictstr-any" title="Permanent link">&para;</a></h5>
+<p>Batch process multiple inputs.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>inputs</code>: List of input texts</li>
+<li><code>**kwargs</code>: Execution parameters</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of results</li>
+</ul>
+<h5 id="async-astreaminput_text-str-kwargs-asynciteratordictstr-any"><code>async astream(input_text: str, **kwargs) -&gt; AsyncIterator[Dict[str, Any]]</code><a class="headerlink" href="#async-astreaminput_text-str-kwargs-asynciteratordictstr-any" title="Permanent link">&para;</a></h5>
+<p>Stream chain execution results.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>input_text</code>: Input query</li>
+<li><code>**kwargs</code>: Execution parameters</li>
+</ul>
+<p><strong>Yields:</strong></p>
+<ul>
+<li>Incremental results</li>
+</ul>
+<h5 id="get_execution_stats-dictstr-any"><code>get_execution_stats() -&gt; Dict[str, Any]</code><a class="headerlink" href="#get_execution_stats-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Get chain execution statistics.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Statistics dictionary</li>
+</ul>
+<hr />
+<h2 id="memory-systems">Memory Systems<a class="headerlink" href="#memory-systems" title="Permanent link">&para;</a></h2>
+<h3 id="quantummemory">QuantumMemory<a class="headerlink" href="#quantummemory" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced memory with entanglement and reversibility.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumMemory</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Reversible, entangled memory system.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_2">Methods<a class="headerlink" href="#methods_2" title="Permanent link">&para;</a></h4>
+<h5 id="__init__classical_dim-int-quantum_dim-int-backend-optionalquantumbackend-none"><code>__init__(classical_dim: int, quantum_dim: int, backend: Optional[QuantumBackend] = None)</code><a class="headerlink" href="#__init__classical_dim-int-quantum_dim-int-backend-optionalquantumbackend-none" title="Permanent link">&para;</a></h5>
+<p>Initialize quantum memory.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>classical_dim</code>: Classical embedding dimension</li>
+<li><code>quantum_dim</code>: Quantum register size</li>
+<li><code>backend</code>: Quantum backend</li>
+</ul>
+<h5 id="async-storekey-str-value-any-quantum_enhanced-bool-false-none"><code>async store(key: str, value: Any, quantum_enhanced: bool = False) -&gt; None</code><a class="headerlink" href="#async-storekey-str-value-any-quantum_enhanced-bool-false-none" title="Permanent link">&para;</a></h5>
+<p>Store memory entry.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>key</code>: Memory key</li>
+<li><code>value</code>: Value to store</li>
+<li><code>quantum_enhanced</code>: Enable quantum enhancement</li>
+</ul>
+<h5 id="async-retrievekey-str-quantum_search-bool-false-any"><code>async retrieve(key: str, quantum_search: bool = False) -&gt; Any</code><a class="headerlink" href="#async-retrievekey-str-quantum_search-bool-false-any" title="Permanent link">&para;</a></h5>
+<p>Retrieve memory entry.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>key</code>: Memory key</li>
+<li><code>quantum_search</code>: Use quantum search</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Retrieved value or None</li>
+</ul>
+<h5 id="async-similarity_searchquery-str-top_k-int-5-listdictstr-any"><code>async similarity_search(query: str, top_k: int = 5) -&gt; List[Dict[str, Any]]</code><a class="headerlink" href="#async-similarity_searchquery-str-top_k-int-5-listdictstr-any" title="Permanent link">&para;</a></h5>
+<p>Search memory by similarity.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code>: Search query</li>
+<li><code>top_k</code>: Number of results</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of similar entries</li>
+</ul>
+<h5 id="async-entangle_memorieskeys-liststr-str"><code>async entangle_memories(keys: List[str]) -&gt; str</code><a class="headerlink" href="#async-entangle_memorieskeys-liststr-str" title="Permanent link">&para;</a></h5>
+<p>Create entanglement between memory entries.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>keys</code>: List of memory keys</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Entanglement ID</li>
+</ul>
+<h5 id="async-create_memory_snapshot-str"><code>async create_memory_snapshot() -&gt; str</code><a class="headerlink" href="#async-create_memory_snapshot-str" title="Permanent link">&para;</a></h5>
+<p>Create reversible memory snapshot.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Snapshot ID</li>
+</ul>
+<h5 id="async-restore_memory_snapshotsnapshot_id-str-bool"><code>async restore_memory_snapshot(snapshot_id: str) -&gt; bool</code><a class="headerlink" href="#async-restore_memory_snapshotsnapshot_id-str-bool" title="Permanent link">&para;</a></h5>
+<p>Restore memory from snapshot.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>snapshot_id</code>: Snapshot identifier</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Success status</li>
+</ul>
+<h5 id="async-get_stats-dictstr-any"><code>async get_stats() -&gt; Dict[str, Any]</code><a class="headerlink" href="#async-get_stats-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Get memory statistics.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Statistics dictionary</li>
+</ul>
+<hr />
+<h2 id="agents">Agents<a class="headerlink" href="#agents" title="Permanent link">&para;</a></h2>
+<h3 id="entangledagents">EntangledAgents<a class="headerlink" href="#entangledagents" title="Permanent link">&para;</a></h3>
+<p>Multi-agent system with quantum collaboration.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">EntangledAgents</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Entangled agent system for collaborative problem solving.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_3">Methods<a class="headerlink" href="#methods_3" title="Permanent link">&para;</a></h4>
+<h5 id="__init__agent_configs-listdictstr-any-backend-optionalquantumbackend-none"><code>__init__(agent_configs: List[Dict[str, Any]], backend: Optional[QuantumBackend] = None)</code><a class="headerlink" href="#__init__agent_configs-listdictstr-any-backend-optionalquantumbackend-none" title="Permanent link">&para;</a></h5>
+<p>Initialize entangled agent system.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>agent_configs</code>: List of agent configurations</li>
+<li><code>backend</code>: Quantum backend</li>
+</ul>
+<h5 id="async-collaborative_solveproblem-str-max_iterations-int-5-enable_interference-bool-true-dictstr-any"><code>async collaborative_solve(problem: str, max_iterations: int = 5, enable_interference: bool = True) -&gt; Dict[str, Any]</code><a class="headerlink" href="#async-collaborative_solveproblem-str-max_iterations-int-5-enable_interference-bool-true-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Solve problem collaboratively.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>problem</code>: Problem description</li>
+<li><code>max_iterations</code>: Maximum solving iterations</li>
+<li><code>enable_interference</code>: Enable quantum interference</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Solution with collaboration details</li>
+</ul>
+<h5 id="async-run_single_agentagent_id-str-problem-str-dictstr-any"><code>async run_single_agent(agent_id: str, problem: str) -&gt; Dict[str, Any]</code><a class="headerlink" href="#async-run_single_agentagent_id-str-problem-str-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Run single agent on problem.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>agent_id</code>: Agent identifier</li>
+<li><code>problem</code>: Problem description</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Agent solution</li>
+</ul>
+<h5 id="async-run_parallel_agentsagent_ids-liststr-problem-str-listdictstr-any"><code>async run_parallel_agents(agent_ids: List[str], problem: str) -&gt; List[Dict[str, Any]]</code><a class="headerlink" href="#async-run_parallel_agentsagent_ids-liststr-problem-str-listdictstr-any" title="Permanent link">&para;</a></h5>
+<p>Run multiple agents in parallel.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>agent_ids</code>: List of agent identifiers</li>
+<li><code>problem</code>: Problem description</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of agent solutions</li>
+</ul>
+<h5 id="async-propagate_beliefbelief-beliefstate-listbeliefstate"><code>async propagate_belief(belief: BeliefState) -&gt; List[BeliefState]</code><a class="headerlink" href="#async-propagate_beliefbelief-beliefstate-listbeliefstate" title="Permanent link">&para;</a></h5>
+<p>Propagate belief across agents.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>belief</code>: Initial belief state</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of propagated beliefs</li>
+</ul>
+<h5 id="add_agent_rolerole-agentrole-none"><code>add_agent_role(role: AgentRole) -&gt; None</code><a class="headerlink" href="#add_agent_rolerole-agentrole-none" title="Permanent link">&para;</a></h5>
+<p>Add new agent role.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>role</code>: Agent role configuration</li>
+</ul>
+<h5 id="update_agent_roleagent_id-str-kwargs-none"><code>update_agent_role(agent_id: str, **kwargs) -&gt; None</code><a class="headerlink" href="#update_agent_roleagent_id-str-kwargs-none" title="Permanent link">&para;</a></h5>
+<p>Update existing agent role.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>agent_id</code>: Agent identifier</li>
+<li><code>**kwargs</code>: Role updates</li>
+</ul>
+<h5 id="get_performance_stats-dictstr-any"><code>get_performance_stats() -&gt; Dict[str, Any]</code><a class="headerlink" href="#get_performance_stats-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Get agent performance statistics.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Performance statistics</li>
+</ul>
+<hr />
+<h2 id="retrievers">Retrievers<a class="headerlink" href="#retrievers" title="Permanent link">&para;</a></h2>
+<h3 id="quantumretriever">QuantumRetriever<a class="headerlink" href="#quantumretriever" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced document retrieval system.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumRetriever</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum-enhanced semantic retrieval with Grover&#39;s algorithm.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_4">Methods<a class="headerlink" href="#methods_4" title="Permanent link">&para;</a></h4>
+<h5 id="__init__vectorstore-any-backend-optionalquantumbackend-none-config-optionaldict-none"><code>__init__(vectorstore: Any, backend: Optional[QuantumBackend] = None, config: Optional[Dict] = None)</code><a class="headerlink" href="#__init__vectorstore-any-backend-optionalquantumbackend-none-config-optionaldict-none" title="Permanent link">&para;</a></h5>
+<p>Initialize quantum retriever.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vectorstore</code>: Vector store backend</li>
+<li><code>backend</code>: Quantum backend</li>
+<li><code>config</code>: Retriever configuration</li>
+</ul>
+<h5 id="async-aretrievequery-str-quantum_enhanced-bool-true-kwargs-listdocument"><code>async aretrieve(query: str, quantum_enhanced: bool = True, **kwargs) -&gt; List[Document]</code><a class="headerlink" href="#async-aretrievequery-str-quantum_enhanced-bool-true-kwargs-listdocument" title="Permanent link">&para;</a></h5>
+<p>Retrieve relevant documents.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code>: Search query</li>
+<li><code>quantum_enhanced</code>: Use quantum enhancement</li>
+<li><code>**kwargs</code>: Additional parameters</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of relevant documents</li>
+</ul>
+<h5 id="async-asimilarity_searchquery-str-k-int-5-algorithm-str-amplitude_amplification-listtupledocument-float"><code>async asimilarity_search(query: str, k: int = 5, algorithm: str = "amplitude_amplification") -&gt; List[Tuple[Document, float]]</code><a class="headerlink" href="#async-asimilarity_searchquery-str-k-int-5-algorithm-str-amplitude_amplification-listtupledocument-float" title="Permanent link">&para;</a></h5>
+<p>Perform quantum similarity search.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code>: Search query</li>
+<li><code>k</code>: Number of results</li>
+<li><code>algorithm</code>: Quantum algorithm to use</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of documents with scores</li>
+</ul>
+<h5 id="get_retrieval_stats-dictstr-any"><code>get_retrieval_stats() -&gt; Dict[str, Any]</code><a class="headerlink" href="#get_retrieval_stats-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Get retrieval statistics.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Retrieval statistics</li>
+</ul>
+<hr />
+<h2 id="vector-stores">Vector Stores<a class="headerlink" href="#vector-stores" title="Permanent link">&para;</a></h2>
+<h3 id="hybridchromadb">HybridChromaDB<a class="headerlink" href="#hybridchromadb" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced ChromaDB vector store.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">HybridChromaDB</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Hybrid ChromaDB with quantum similarity search.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_5">Methods<a class="headerlink" href="#methods_5" title="Permanent link">&para;</a></h4>
+<h5 id="__init__collection_name-str-quantum_documents-persist_directory-optionalstr-none-embedding_function-optionalany-none-config-optionaldict-none"><code>__init__(collection_name: str = "quantum_documents", persist_directory: Optional[str] = None, embedding_function: Optional[Any] = None, config: Optional[Dict] = None)</code><a class="headerlink" href="#__init__collection_name-str-quantum_documents-persist_directory-optionalstr-none-embedding_function-optionalany-none-config-optionaldict-none" title="Permanent link">&para;</a></h5>
+<p>Initialize hybrid ChromaDB.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>collection_name</code>: Collection name</li>
+<li><code>persist_directory</code>: Persistence directory</li>
+<li><code>embedding_function</code>: Embedding function</li>
+<li><code>config</code>: Configuration</li>
+</ul>
+<h5 id="async-add_documentsdocuments-liststr-metadatas-optionallistdict-none-ids-optionalliststr-none-embeddings-optionallistlistfloat-none-quantum_enhanced-bool-false-liststr"><code>async add_documents(documents: List[str], metadatas: Optional[List[Dict]] = None, ids: Optional[List[str]] = None, embeddings: Optional[List[List[float]]] = None, quantum_enhanced: bool = False) -&gt; List[str]</code><a class="headerlink" href="#async-add_documentsdocuments-liststr-metadatas-optionallistdict-none-ids-optionalliststr-none-embeddings-optionallistlistfloat-none-quantum_enhanced-bool-false-liststr" title="Permanent link">&para;</a></h5>
+<p>Add documents to collection.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>documents</code>: List of document texts</li>
+<li><code>metadatas</code>: Document metadata</li>
+<li><code>ids</code>: Document IDs</li>
+<li><code>embeddings</code>: Pre-computed embeddings</li>
+<li><code>quantum_enhanced</code>: Enable quantum enhancement</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of document IDs</li>
+</ul>
+<h5 id="async-similarity_searchquery-str-k-int-5-filter-optionaldict-none-quantum_enhanced-bool-false-listtuplequantumdocument-float"><code>async similarity_search(query: str, k: int = 5, filter: Optional[Dict] = None, quantum_enhanced: bool = False) -&gt; List[Tuple[QuantumDocument, float]]</code><a class="headerlink" href="#async-similarity_searchquery-str-k-int-5-filter-optionaldict-none-quantum_enhanced-bool-false-listtuplequantumdocument-float" title="Permanent link">&para;</a></h5>
+<p>Search for similar documents.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code>: Search query</li>
+<li><code>k</code>: Number of results</li>
+<li><code>filter</code>: Metadata filter</li>
+<li><code>quantum_enhanced</code>: Use quantum enhancement</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of documents with similarity scores</li>
+</ul>
+<h5 id="async-entangle_documentsdoc_ids-liststr-entanglement_strength-float-08-str"><code>async entangle_documents(doc_ids: List[str], entanglement_strength: float = 0.8) -&gt; str</code><a class="headerlink" href="#async-entangle_documentsdoc_ids-liststr-entanglement_strength-float-08-str" title="Permanent link">&para;</a></h5>
+<p>Create document entanglement.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>doc_ids</code>: Document IDs to entangle</li>
+<li><code>entanglement_strength</code>: Entanglement strength</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Entanglement ID</li>
+</ul>
+<h5 id="async-quantum_similarity_searchquery-str-k-int-5-quantum_algorithm-str-amplitude_amplification-listtuplequantumdocument-float"><code>async quantum_similarity_search(query: str, k: int = 5, quantum_algorithm: str = "amplitude_amplification") -&gt; List[Tuple[QuantumDocument, float]]</code><a class="headerlink" href="#async-quantum_similarity_searchquery-str-k-int-5-quantum_algorithm-str-amplitude_amplification-listtuplequantumdocument-float" title="Permanent link">&para;</a></h5>
+<p>Quantum-enhanced similarity search.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query</code>: Search query</li>
+<li><code>k</code>: Number of results</li>
+<li><code>quantum_algorithm</code>: Quantum algorithm</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Enhanced search results</li>
+</ul>
+<h3 id="quantumfaiss">QuantumFAISS<a class="headerlink" href="#quantumfaiss" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced FAISS vector store.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumFAISS</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;FAISS vector store with quantum amplitude amplification.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_6">Methods<a class="headerlink" href="#methods_6" title="Permanent link">&para;</a></h4>
+<h5 id="__init__dimension-int-index_type-str-ivfflat-metric-str-l2-nlist-int-100-persist_path-optionalstr-none-config-optionaldict-none"><code>__init__(dimension: int, index_type: str = "IVFFlat", metric: str = "L2", nlist: int = 100, persist_path: Optional[str] = None, config: Optional[Dict] = None)</code><a class="headerlink" href="#__init__dimension-int-index_type-str-ivfflat-metric-str-l2-nlist-int-100-persist_path-optionalstr-none-config-optionaldict-none" title="Permanent link">&para;</a></h5>
+<p>Initialize quantum FAISS.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>dimension</code>: Vector dimension</li>
+<li><code>index_type</code>: FAISS index type</li>
+<li><code>metric</code>: Distance metric</li>
+<li><code>nlist</code>: Number of clusters</li>
+<li><code>persist_path</code>: Persistence path</li>
+<li><code>config</code>: Configuration</li>
+</ul>
+<h5 id="async-add_vectorsvectors-unionnpndarray-listlistfloat-ids-optionalliststr-none-metadatas-optionallistdict-none-quantum_enhanced-bool-false-liststr"><code>async add_vectors(vectors: Union[np.ndarray, List[List[float]]], ids: Optional[List[str]] = None, metadatas: Optional[List[Dict]] = None, quantum_enhanced: bool = False) -&gt; List[str]</code><a class="headerlink" href="#async-add_vectorsvectors-unionnpndarray-listlistfloat-ids-optionalliststr-none-metadatas-optionallistdict-none-quantum_enhanced-bool-false-liststr" title="Permanent link">&para;</a></h5>
+<p>Add vectors to index.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>vectors</code>: Vector data</li>
+<li><code>ids</code>: Vector IDs</li>
+<li><code>metadatas</code>: Vector metadata</li>
+<li><code>quantum_enhanced</code>: Enable quantum enhancement</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of vector IDs</li>
+</ul>
+<h5 id="async-searchquery_vector-unionnpndarray-listfloat-k-int-5-quantum_enhanced-bool-false-filter_metadata-optionaldict-none-listtuplestr-float-dict"><code>async search(query_vector: Union[np.ndarray, List[float]], k: int = 5, quantum_enhanced: bool = False, filter_metadata: Optional[Dict] = None) -&gt; List[Tuple[str, float, Dict]]</code><a class="headerlink" href="#async-searchquery_vector-unionnpndarray-listfloat-k-int-5-quantum_enhanced-bool-false-filter_metadata-optionaldict-none-listtuplestr-float-dict" title="Permanent link">&para;</a></h5>
+<p>Search for similar vectors.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query_vector</code>: Query vector</li>
+<li><code>k</code>: Number of results</li>
+<li><code>quantum_enhanced</code>: Use quantum enhancement</li>
+<li><code>filter_metadata</code>: Metadata filter</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Search results with scores</li>
+</ul>
+<h5 id="async-amplitude_amplification_searchquery_vector-unionnpndarray-listfloat-target_condition-callable-k-int-5-iterations-int-3-listtuplestr-float-dict"><code>async amplitude_amplification_search(query_vector: Union[np.ndarray, List[float]], target_condition: Callable, k: int = 5, iterations: int = 3) -&gt; List[Tuple[str, float, Dict]]</code><a class="headerlink" href="#async-amplitude_amplification_searchquery_vector-unionnpndarray-listfloat-target_condition-callable-k-int-5-iterations-int-3-listtuplestr-float-dict" title="Permanent link">&para;</a></h5>
+<p>Amplitude amplification search.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>query_vector</code>: Query vector</li>
+<li><code>target_condition</code>: Target condition function</li>
+<li><code>k</code>: Number of results</li>
+<li><code>iterations</code>: Amplification iterations</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Amplified search results</li>
+</ul>
+<h5 id="async-grovers_searchoracle_function-callable-k-int-5-max_iterations-int-10-listtuplestr-float-dict"><code>async grovers_search(oracle_function: Callable, k: int = 5, max_iterations: int = 10) -&gt; List[Tuple[str, float, Dict]]</code><a class="headerlink" href="#async-grovers_searchoracle_function-callable-k-int-5-max_iterations-int-10-listtuplestr-float-dict" title="Permanent link">&para;</a></h5>
+<p>Grover's algorithm search.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>oracle_function</code>: Oracle function</li>
+<li><code>k</code>: Number of results</li>
+<li><code>max_iterations</code>: Maximum iterations</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Grover's search results</li>
+</ul>
+<hr />
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
+<h3 id="quantumtoolexecutor">QuantumToolExecutor<a class="headerlink" href="#quantumtoolexecutor" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced tool execution system.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumToolExecutor</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum tool execution with entangled tool chaining.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_7">Methods<a class="headerlink" href="#methods_7" title="Permanent link">&para;</a></h4>
+<h5 id="register_toolname-str-function-callable-description-str-quantum_enhanced-bool-false-parallel_execution-bool-false-entanglement_enabled-bool-false-none"><code>register_tool(name: str, function: Callable, description: str, quantum_enhanced: bool = False, parallel_execution: bool = False, entanglement_enabled: bool = False) -&gt; None</code><a class="headerlink" href="#register_toolname-str-function-callable-description-str-quantum_enhanced-bool-false-parallel_execution-bool-false-entanglement_enabled-bool-false-none" title="Permanent link">&para;</a></h5>
+<p>Register a tool.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code>: Tool name</li>
+<li><code>function</code>: Tool function</li>
+<li><code>description</code>: Tool description</li>
+<li><code>quantum_enhanced</code>: Enable quantum enhancement</li>
+<li><code>parallel_execution</code>: Allow parallel execution</li>
+<li><code>entanglement_enabled</code>: Enable entanglement</li>
+</ul>
+<h5 id="async-execute_tooltool_name-str-args-quantum_enhanced-optionalbool-none-kwargs-toolresult"><code>async execute_tool(tool_name: str, *args, quantum_enhanced: Optional[bool] = None, **kwargs) -&gt; ToolResult</code><a class="headerlink" href="#async-execute_tooltool_name-str-args-quantum_enhanced-optionalbool-none-kwargs-toolresult" title="Permanent link">&para;</a></h5>
+<p>Execute a single tool.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tool_name</code>: Name of tool to execute</li>
+<li><code>*args</code>: Tool arguments</li>
+<li><code>quantum_enhanced</code>: Override quantum enhancement</li>
+<li><code>**kwargs</code>: Tool keyword arguments</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Tool execution result</li>
+</ul>
+<h5 id="async-execute_parallel_toolstool_configs-listdictstr-any-entangle_results-bool-false-listtoolresult"><code>async execute_parallel_tools(tool_configs: List[Dict[str, Any]], entangle_results: bool = False) -&gt; List[ToolResult]</code><a class="headerlink" href="#async-execute_parallel_toolstool_configs-listdictstr-any-entangle_results-bool-false-listtoolresult" title="Permanent link">&para;</a></h5>
+<p>Execute multiple tools in parallel.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tool_configs</code>: Tool configuration list</li>
+<li><code>entangle_results</code>: Entangle results</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of tool results</li>
+</ul>
+<h5 id="async-execute_quantum_superposition_toolstool_configs-listdictstr-any-measurement_function-optionalcallable-none-toolresult"><code>async execute_quantum_superposition_tools(tool_configs: List[Dict[str, Any]], measurement_function: Optional[Callable] = None) -&gt; ToolResult</code><a class="headerlink" href="#async-execute_quantum_superposition_toolstool_configs-listdictstr-any-measurement_function-optionalcallable-none-toolresult" title="Permanent link">&para;</a></h5>
+<p>Execute tools in quantum superposition.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>tool_configs</code>: Tool configurations</li>
+<li><code>measurement_function</code>: Result measurement function</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Measured tool result</li>
+</ul>
+<h5 id="create_tool_chainchain_name-str-tool_names-liststr-none"><code>create_tool_chain(chain_name: str, tool_names: List[str]) -&gt; None</code><a class="headerlink" href="#create_tool_chainchain_name-str-tool_names-liststr-none" title="Permanent link">&para;</a></h5>
+<p>Create a tool execution chain.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>chain_name</code>: Chain name</li>
+<li><code>tool_names</code>: List of tool names</li>
+</ul>
+<h5 id="async-execute_tool_chainchain_name-str-initial_input-any-none-propagate_results-bool-true-listtoolresult"><code>async execute_tool_chain(chain_name: str, initial_input: Any = None, propagate_results: bool = True) -&gt; List[ToolResult]</code><a class="headerlink" href="#async-execute_tool_chainchain_name-str-initial_input-any-none-propagate_results-bool-true-listtoolresult" title="Permanent link">&para;</a></h5>
+<p>Execute a tool chain.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>chain_name</code>: Chain to execute</li>
+<li><code>initial_input</code>: Initial input data</li>
+<li><code>propagate_results</code>: Propagate results between tools</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>List of chain results</li>
+</ul>
+<hr />
+<h2 id="context-management">Context Management<a class="headerlink" href="#context-management" title="Permanent link">&para;</a></h2>
+<h3 id="quantumcontextmanager">QuantumContextManager<a class="headerlink" href="#quantumcontextmanager" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced context management with temporal snapshots.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumContextManager</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum context management with coherent state tracking.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_8">Methods<a class="headerlink" href="#methods_8" title="Permanent link">&para;</a></h4>
+<h5 id="create_context_windowwindow_id-str-max_size-int-100-coherence_threshold-float-08-contextwindow"><code>create_context_window(window_id: str, max_size: int = 100, coherence_threshold: float = 0.8) -&gt; ContextWindow</code><a class="headerlink" href="#create_context_windowwindow_id-str-max_size-int-100-coherence_threshold-float-08-contextwindow" title="Permanent link">&para;</a></h5>
+<p>Create a context window.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>window_id</code>: Window identifier</li>
+<li><code>max_size</code>: Maximum window size</li>
+<li><code>coherence_threshold</code>: Coherence threshold</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Context window instance</li>
+</ul>
+<h5 id="async-set_contextscope-contextscope-key-str-value-any-quantum_enhanced-bool-false-window_id-optionalstr-none-none"><code>async set_context(scope: ContextScope, key: str, value: Any, quantum_enhanced: bool = False, window_id: Optional[str] = None) -&gt; None</code><a class="headerlink" href="#async-set_contextscope-contextscope-key-str-value-any-quantum_enhanced-bool-false-window_id-optionalstr-none-none" title="Permanent link">&para;</a></h5>
+<p>Set context value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scope</code>: Context scope</li>
+<li><code>key</code>: Context key</li>
+<li><code>value</code>: Context value</li>
+<li><code>quantum_enhanced</code>: Enable quantum enhancement</li>
+<li><code>window_id</code>: Target window ID</li>
+</ul>
+<h5 id="async-get_contextscope-contextscope-key-str-default-any-none-quantum_search-bool-false-any"><code>async get_context(scope: ContextScope, key: str, default: Any = None, quantum_search: bool = False) -&gt; Any</code><a class="headerlink" href="#async-get_contextscope-contextscope-key-str-default-any-none-quantum_search-bool-false-any" title="Permanent link">&para;</a></h5>
+<p>Get context value.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scope</code>: Context scope</li>
+<li><code>key</code>: Context key</li>
+<li><code>default</code>: Default value</li>
+<li><code>quantum_search</code>: Use quantum search</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Context value</li>
+</ul>
+<h5 id="async-create_snapshotscope-contextscope-contextscopesession-include_windows-bool-true-str"><code>async create_snapshot(scope: ContextScope = ContextScope.SESSION, include_windows: bool = True) -&gt; str</code><a class="headerlink" href="#async-create_snapshotscope-contextscope-contextscopesession-include_windows-bool-true-str" title="Permanent link">&para;</a></h5>
+<p>Create context snapshot.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>scope</code>: Snapshot scope</li>
+<li><code>include_windows</code>: Include context windows</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Snapshot ID</li>
+</ul>
+<h5 id="async-restore_snapshotsnapshot_id-str-bool"><code>async restore_snapshot(snapshot_id: str) -&gt; bool</code><a class="headerlink" href="#async-restore_snapshotsnapshot_id-str-bool" title="Permanent link">&para;</a></h5>
+<p>Restore from snapshot.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>snapshot_id</code>: Snapshot identifier</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Success status</li>
+</ul>
+<h5 id="async-entangle_contextscontext_keys-listtuplecontextscope-str-entanglement_strength-float-08-str"><code>async entangle_contexts(context_keys: List[Tuple[ContextScope, str]], entanglement_strength: float = 0.8) -&gt; str</code><a class="headerlink" href="#async-entangle_contextscontext_keys-listtuplecontextscope-str-entanglement_strength-float-08-str" title="Permanent link">&para;</a></h5>
+<p>Entangle context items.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>context_keys</code>: List of context keys with scopes</li>
+<li><code>entanglement_strength</code>: Entanglement strength</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Entanglement ID</li>
+</ul>
+<hr />
+<h2 id="prompts">Prompts<a class="headerlink" href="#prompts" title="Permanent link">&para;</a></h2>
+<h3 id="qpromptchain">QPromptChain<a class="headerlink" href="#qpromptchain" title="Permanent link">&para;</a></h3>
+<p>Quantum-enhanced prompt chaining system.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QPromptChain</span><span class="p">(</span><span class="n">QuantumBase</span><span class="p">):</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Quantum prompt chaining with superposition-based selection.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_9">Methods<a class="headerlink" href="#methods_9" title="Permanent link">&para;</a></h4>
+<h5 id="add_promptcontent-str-prompt_type-prompttype-prompttypeuser-quantum_weight-float-10-conditions-optionaldict-none-metadata-optionaldict-none-str"><code>add_prompt(content: str, prompt_type: PromptType = PromptType.USER, quantum_weight: float = 1.0, conditions: Optional[Dict] = None, metadata: Optional[Dict] = None) -&gt; str</code><a class="headerlink" href="#add_promptcontent-str-prompt_type-prompttype-prompttypeuser-quantum_weight-float-10-conditions-optionaldict-none-metadata-optionaldict-none-str" title="Permanent link">&para;</a></h5>
+<p>Add a prompt to the collection.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>content</code>: Prompt content</li>
+<li><code>prompt_type</code>: Type of prompt</li>
+<li><code>quantum_weight</code>: Quantum selection weight</li>
+<li><code>conditions</code>: Conditional logic</li>
+<li><code>metadata</code>: Prompt metadata</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Prompt ID</li>
+</ul>
+<h5 id="create_prompt_chainchain_name-str-prompt_ids-liststr-allow_quantum_selection-bool-true-none"><code>create_prompt_chain(chain_name: str, prompt_ids: List[str], allow_quantum_selection: bool = True) -&gt; None</code><a class="headerlink" href="#create_prompt_chainchain_name-str-prompt_ids-liststr-allow_quantum_selection-bool-true-none" title="Permanent link">&para;</a></h5>
+<p>Create a prompt chain.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>chain_name</code>: Chain name</li>
+<li><code>prompt_ids</code>: List of prompt IDs</li>
+<li><code>allow_quantum_selection</code>: Enable quantum selection</li>
+</ul>
+<h5 id="create_superposition_groupgroup_name-str-prompt_ids-liststr-selection_method-str-quantum_interference-none"><code>create_superposition_group(group_name: str, prompt_ids: List[str], selection_method: str = "quantum_interference") -&gt; None</code><a class="headerlink" href="#create_superposition_groupgroup_name-str-prompt_ids-liststr-selection_method-str-quantum_interference-none" title="Permanent link">&para;</a></h5>
+<p>Create superposition group.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>group_name</code>: Group name</li>
+<li><code>prompt_ids</code>: Prompt IDs</li>
+<li><code>selection_method</code>: Selection algorithm</li>
+</ul>
+<h5 id="async-execute_prompt_chainchain_name-str-context-dictstr-any-variables-optionaldictstr-any-none-promptchainresult"><code>async execute_prompt_chain(chain_name: str, context: Dict[str, Any], variables: Optional[Dict[str, Any]] = None) -&gt; PromptChainResult</code><a class="headerlink" href="#async-execute_prompt_chainchain_name-str-context-dictstr-any-variables-optionaldictstr-any-none-promptchainresult" title="Permanent link">&para;</a></h5>
+<p>Execute prompt chain.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>chain_name</code>: Chain to execute</li>
+<li><code>context</code>: Execution context</li>
+<li><code>variables</code>: Template variables</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Chain execution result</li>
+</ul>
+<h5 id="entangle_promptsprompt_ids-liststr-entanglement_strength-float-08-str"><code>entangle_prompts(prompt_ids: List[str], entanglement_strength: float = 0.8) -&gt; str</code><a class="headerlink" href="#entangle_promptsprompt_ids-liststr-entanglement_strength-float-08-str" title="Permanent link">&para;</a></h5>
+<p>Entangle prompts.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>prompt_ids</code>: Prompt IDs to entangle</li>
+<li><code>entanglement_strength</code>: Entanglement strength</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Entanglement ID</li>
+</ul>
+<hr />
+<h2 id="backends">Backends<a class="headerlink" href="#backends" title="Permanent link">&para;</a></h2>
+<h3 id="quantumbackend">QuantumBackend<a class="headerlink" href="#quantumbackend" title="Permanent link">&para;</a></h3>
+<p>Abstract base class for quantum backends.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumBackend</span><span class="p">:</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract interface for quantum computing backends.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h4 id="methods_10">Methods<a class="headerlink" href="#methods_10" title="Permanent link">&para;</a></h4>
+<h5 id="async-execute_circuitcircuit-any-shots-int-1000-dictstr-any"><code>async execute_circuit(circuit: Any, shots: int = 1000) -&gt; Dict[str, Any]</code><a class="headerlink" href="#async-execute_circuitcircuit-any-shots-int-1000-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Execute quantum circuit.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>circuit</code>: Quantum circuit</li>
+<li><code>shots</code>: Number of measurements</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Execution results</li>
+</ul>
+<h5 id="async-create_entangling_circuitqubits-listint-any"><code>async create_entangling_circuit(qubits: List[int]) -&gt; Any</code><a class="headerlink" href="#async-create_entangling_circuitqubits-listint-any" title="Permanent link">&para;</a></h5>
+<p>Create entangling circuit.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>qubits</code>: Qubit indices</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Quantum circuit</li>
+</ul>
+<h5 id="get_backend_info-dictstr-any"><code>get_backend_info() -&gt; Dict[str, Any]</code><a class="headerlink" href="#get_backend_info-dictstr-any" title="Permanent link">&para;</a></h5>
+<p>Get backend information.</p>
+<p><strong>Returns:</strong></p>
+<ul>
+<li>Backend capabilities and info</li>
+</ul>
+<h3 id="qiskitbackend">QiskitBackend<a class="headerlink" href="#qiskitbackend" title="Permanent link">&para;</a></h3>
+<p>IBM Qiskit quantum backend.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QiskitBackend</span><span class="p">(</span><span class="n">QuantumBackend</span><span class="p">):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Qiskit quantum computing backend.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h3 id="pennylanebackend">PennyLaneBackend<a class="headerlink" href="#pennylanebackend" title="Permanent link">&para;</a></h3>
+<p>Xanadu PennyLane quantum backend.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">PennyLaneBackend</span><span class="p">(</span><span class="n">QuantumBackend</span><span class="p">):</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;PennyLane quantum machine learning backend.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<h3 id="braketbackend">BraketBackend<a class="headerlink" href="#braketbackend" title="Permanent link">&para;</a></h3>
+<p>Amazon Braket quantum backend.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">BraketBackend</span><span class="p">(</span><span class="n">QuantumBackend</span><span class="p">):</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Amazon Braket quantum computing backend.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="quantumconfig">QuantumConfig<a class="headerlink" href="#quantumconfig" title="Permanent link">&para;</a></h3>
+<p>Configuration class for quantum parameters.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nd">@dataclass</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumConfig</span><span class="p">:</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Configuration for quantum components.&quot;&quot;&quot;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="n">num_qubits</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">circuit_depth</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="n">decoherence_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="n">backend_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;qiskit&quot;</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    <span class="n">optimization_level</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="n">enable_error_correction</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+</span></code></pre></div>
+<hr />
+<h2 id="data-classes">Data Classes<a class="headerlink" href="#data-classes" title="Permanent link">&para;</a></h2>
+<h3 id="document">Document<a class="headerlink" href="#document" title="Permanent link">&para;</a></h3>
+<p>Document class for retrieved content.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nd">@dataclass</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">Document</span><span class="p">:</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Document with content and metadata.&quot;&quot;&quot;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="n">page_content</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="toolresult">ToolResult<a class="headerlink" href="#toolresult" title="Permanent link">&para;</a></h3>
+<p>Result from tool execution.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nd">@dataclass</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">ToolResult</span><span class="p">:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Tool execution result.&quot;&quot;&quot;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="n">result</span><span class="p">:</span> <span class="n">Any</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    <span class="n">execution_time</span><span class="p">:</span> <span class="nb">float</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    <span class="n">quantum_enhanced</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>    <span class="n">entanglement_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="n">error</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    <span class="n">metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="enums">Enums<a class="headerlink" href="#enums" title="Permanent link">&para;</a></h2>
+<h3 id="quantumstate">QuantumState<a class="headerlink" href="#quantumstate" title="Permanent link">&para;</a></h3>
+<p>Quantum state enumeration.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumState</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="n">COHERENT</span> <span class="o">=</span> <span class="s2">&quot;coherent&quot;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="n">SUPERPOSITION</span> <span class="o">=</span> <span class="s2">&quot;superposition&quot;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="n">ENTANGLED</span> <span class="o">=</span> <span class="s2">&quot;entangled&quot;</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="n">COLLAPSED</span> <span class="o">=</span> <span class="s2">&quot;collapsed&quot;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="n">DECOHERENT</span> <span class="o">=</span> <span class="s2">&quot;decoherent&quot;</span>
+</span></code></pre></div>
+<h3 id="contextscope">ContextScope<a class="headerlink" href="#contextscope" title="Permanent link">&para;</a></h3>
+<p>Context scope levels.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">ContextScope</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="n">GLOBAL</span> <span class="o">=</span> <span class="s2">&quot;global&quot;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="n">SESSION</span> <span class="o">=</span> <span class="s2">&quot;session&quot;</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="n">CONVERSATION</span> <span class="o">=</span> <span class="s2">&quot;conversation&quot;</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="n">TURN</span> <span class="o">=</span> <span class="s2">&quot;turn&quot;</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="n">QUANTUM_STATE</span> <span class="o">=</span> <span class="s2">&quot;quantum_state&quot;</span>
+</span></code></pre></div>
+<h3 id="prompttype">PromptType<a class="headerlink" href="#prompttype" title="Permanent link">&para;</a></h3>
+<p>Prompt type enumeration.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">PromptType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="n">SYSTEM</span> <span class="o">=</span> <span class="s2">&quot;system&quot;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="n">USER</span> <span class="o">=</span> <span class="s2">&quot;user&quot;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="n">ASSISTANT</span> <span class="o">=</span> <span class="s2">&quot;assistant&quot;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="n">QUANTUM_SUPERPOSITION</span> <span class="o">=</span> <span class="s2">&quot;quantum_superposition&quot;</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="n">ENTANGLED</span> <span class="o">=</span> <span class="s2">&quot;entangled&quot;</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="n">CONDITIONAL</span> <span class="o">=</span> <span class="s2">&quot;conditional&quot;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Krishna Bajpai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/krish567366/Quantum-Langchain" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://pypi.org/project/quantumlangchain/" target="_blank" rel="noopener" title="pypi.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:bajpaikrishna715@gmail.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

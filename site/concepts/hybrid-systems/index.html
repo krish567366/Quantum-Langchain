@@ -1,0 +1,1950 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="LICENSED SOFTWARE – A composable framework for quantum-inspired reasoning, entangled memory systems, and multi-agent cooperation. Contact bajpaikrishna715@gmail.com for licensing." name="description"/>
+<meta content="Krishna Bajpai" name="author"/>
+<link href="https://krish567366.github.io/Quantum-Langchain/concepts/hybrid-systems/" rel="canonical"/>
+<link href="../quantum-computing/" rel="prev"/>
+<link href="../entanglement/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Quantum-Classical Hybrid Systems - QuantumLangChain</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-6LNSVBM0Z9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-6LNSVBM0Z9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-6LNSVBM0Z9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+</head>
+<body data-md-color-accent="cyan" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#quantum-classical-hybrid-systems">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="QuantumLangChain" class="md-header__button md-logo" data-md-component="logo" href="../.." title="QuantumLangChain">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            QuantumLangChain
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Quantum-Classical Hybrid Systems
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/krish567366/Quantum-Langchain" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    krish567366/Quantum-Langchain
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../licensing/overview/">
+          
+  
+  
+    
+  
+  Licensing
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../getting-started/installation/">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../theory-architecture/">
+          
+  
+  
+    
+  
+  Theory &amp; Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../modules/qlchain/">
+          
+  
+  
+    
+  
+  Core Modules
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../modules/backends/">
+          
+  
+  
+    
+  
+  Backends
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../vectorstores/overview/">
+          
+  
+  
+    
+  
+  Vector Stores
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-guide/">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../examples/">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../best-practices/">
+        
+  
+  
+    
+  
+  Best Practices
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../architecture/">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../getting-started/">
+        
+  
+  
+    
+  
+  Getting Started Guide
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../deployment/">
+        
+  
+  
+    
+  
+  Deployment
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/">
+        
+  
+  
+    
+  
+  Tutorials
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../api/">
+          
+  
+  
+    
+  
+  API Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../development/contributing/">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../about/license/">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="QuantumLangChain" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="QuantumLangChain">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    QuantumLangChain
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/krish567366/Quantum-Langchain" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    krish567366/Quantum-Langchain
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Licensing
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Licensing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../licensing/overview/">
+<span class="md-ellipsis">
+    License Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../license-integration/">
+<span class="md-ellipsis">
+    License Integration Guide
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../licensing/pricing/">
+<span class="md-ellipsis">
+    Pricing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../licensing/support/">
+<span class="md-ellipsis">
+    Support
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/installation/">
+<span class="md-ellipsis">
+    Installation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/quick-start/">
+<span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/examples/">
+<span class="md-ellipsis">
+    Basic Examples
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/configuration/">
+<span class="md-ellipsis">
+    Configuration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
+    Theory &amp; Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Theory &amp; Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../theory-architecture/">
+<span class="md-ellipsis">
+    Complete Theory
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture/">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quantum-basics/">
+<span class="md-ellipsis">
+    Quantum Computing Basics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quantum-computing/">
+<span class="md-ellipsis">
+    Quantum Computing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Quantum-Classical Hybrid Systems
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Quantum-Classical Hybrid Systems
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-architecture-overview">
+<span class="md-ellipsis">
+      Hybrid Architecture Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-computing-paradigms">
+<span class="md-ellipsis">
+      🌟 Hybrid Computing Paradigms
+    </span>
+</a>
+<nav aria-label="🌟 Hybrid Computing Paradigms" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variational-quantum-algorithms">
+<span class="md-ellipsis">
+      Variational Quantum Algorithms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-classical-feedback-loop">
+<span class="md-ellipsis">
+      Quantum-Classical Feedback Loop
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-advantage-in-hybrid-systems">
+<span class="md-ellipsis">
+      ⚛️ Quantum Advantage in Hybrid Systems
+    </span>
+</a>
+<nav aria-label="⚛️ Quantum Advantage in Hybrid Systems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computational-complexity-comparison">
+<span class="md-ellipsis">
+      Computational Complexity Comparison
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-machine-learning-pipeline">
+<span class="md-ellipsis">
+      Quantum Machine Learning Pipeline
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-strategies">
+<span class="md-ellipsis">
+      🔧 Implementation Strategies
+    </span>
+</a>
+<nav aria-label="🔧 Implementation Strategies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#near-term-quantum-computing-nisq">
+<span class="md-ellipsis">
+      Near-Term Quantum Computing (NISQ)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-enhanced-ai-architecture">
+<span class="md-ellipsis">
+      Quantum-Enhanced AI Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-classical-interfaces">
+<span class="md-ellipsis">
+      🌐 Quantum-Classical Interfaces
+    </span>
+</a>
+<nav aria-label="🌐 Quantum-Classical Interfaces" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-transfer-mechanisms">
+<span class="md-ellipsis">
+      State Transfer Mechanisms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-protocols">
+<span class="md-ellipsis">
+      Communication Protocols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-frameworks">
+<span class="md-ellipsis">
+      🛠️ Development Frameworks
+    </span>
+</a>
+<nav aria-label="🛠️ Development Frameworks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-software-stack">
+<span class="md-ellipsis">
+      Quantum Software Stack
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-characteristics">
+<span class="md-ellipsis">
+      📊 Performance Characteristics
+    </span>
+</a>
+<nav aria-label="📊 Performance Characteristics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-vs-classical-performance">
+<span class="md-ellipsis">
+      Quantum vs Classical Performance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-system-optimization">
+<span class="md-ellipsis">
+      Hybrid System Optimization
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-in-quantumlangchain">
+<span class="md-ellipsis">
+      🎯 Applications in QuantumLangChain
+    </span>
+</a>
+<nav aria-label="🎯 Applications in QuantumLangChain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-enhanced-language-processing">
+<span class="md-ellipsis">
+      Quantum-Enhanced Language Processing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-and-knowledge-systems">
+<span class="md-ellipsis">
+      Memory and Knowledge Systems
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-requirements">
+<span class="md-ellipsis">
+      🔐 License Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-developments">
+<span class="md-ellipsis">
+      🚀 Future Developments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../entanglement/">
+<span class="md-ellipsis">
+    Entanglement in AI
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../decoherence/">
+<span class="md-ellipsis">
+    Decoherence and Error Correction
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../memory-models/">
+<span class="md-ellipsis">
+    Quantum Memory Models
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Core Modules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Core Modules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/qlchain/">
+<span class="md-ellipsis">
+    QLChain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/quantum-memory/">
+<span class="md-ellipsis">
+    QuantumMemory
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/entangled-agents/">
+<span class="md-ellipsis">
+    EntangledAgents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/quantum-retriever/">
+<span class="md-ellipsis">
+    QuantumRetriever
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/response-processor/">
+<span class="md-ellipsis">
+    ResponseProcessor
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/tool-executor/">
+<span class="md-ellipsis">
+    QuantumToolExecutor
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/quantum-chains/">
+<span class="md-ellipsis">
+    QuantumChain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/prompt-chain/">
+<span class="md-ellipsis">
+    QPromptChain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/context-manager/">
+<span class="md-ellipsis">
+    QuantumContextManager
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Backends
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Backends
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../modules/backends/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/qiskit/">
+<span class="md-ellipsis">
+    Qiskit Backend
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/pennylane/">
+<span class="md-ellipsis">
+    PennyLane Backend
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/braket/">
+<span class="md-ellipsis">
+    Braket Backend
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/custom/">
+<span class="md-ellipsis">
+    Custom Backends
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Vector Stores
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Vector Stores
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/chromadb/">
+<span class="md-ellipsis">
+    Hybrid ChromaDB
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/faiss/">
+<span class="md-ellipsis">
+    Quantum FAISS
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/integration/">
+<span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-guide/">
+<span class="md-ellipsis">
+    User Guide
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../examples/">
+<span class="md-ellipsis">
+    Examples
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../best-practices/">
+<span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/">
+<span class="md-ellipsis">
+    Getting Started Guide
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../deployment/">
+<span class="md-ellipsis">
+    Deployment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/">
+<span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../api/">
+<span class="md-ellipsis">
+    API Reference
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/overview/">
+<span class="md-ellipsis">
+    Complete API
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/core/">
+<span class="md-ellipsis">
+    Core
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/chains/">
+<span class="md-ellipsis">
+    Chains
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/memory/">
+<span class="md-ellipsis">
+    Memory
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/agents/">
+<span class="md-ellipsis">
+    Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/retrievers/">
+<span class="md-ellipsis">
+    Retrievers
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/backends.md">
+<span class="md-ellipsis">
+    Backends
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/licensing.md">
+<span class="md-ellipsis">
+    Licensing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_16_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/contributing/">
+<span class="md-ellipsis">
+    Contributing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/testing/">
+<span class="md-ellipsis">
+    Testing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/performance/">
+<span class="md-ellipsis">
+    Performance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/security/">
+<span class="md-ellipsis">
+    Security
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+<span class="md-ellipsis">
+    About
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_17_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_17">
+<span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/license/">
+<span class="md-ellipsis">
+    License
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/changelog/">
+<span class="md-ellipsis">
+    Changelog
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/roadmap/">
+<span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/faq/">
+<span class="md-ellipsis">
+    FAQ
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-architecture-overview">
+<span class="md-ellipsis">
+      Hybrid Architecture Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-computing-paradigms">
+<span class="md-ellipsis">
+      🌟 Hybrid Computing Paradigms
+    </span>
+</a>
+<nav aria-label="🌟 Hybrid Computing Paradigms" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variational-quantum-algorithms">
+<span class="md-ellipsis">
+      Variational Quantum Algorithms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-classical-feedback-loop">
+<span class="md-ellipsis">
+      Quantum-Classical Feedback Loop
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-advantage-in-hybrid-systems">
+<span class="md-ellipsis">
+      ⚛️ Quantum Advantage in Hybrid Systems
+    </span>
+</a>
+<nav aria-label="⚛️ Quantum Advantage in Hybrid Systems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computational-complexity-comparison">
+<span class="md-ellipsis">
+      Computational Complexity Comparison
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-machine-learning-pipeline">
+<span class="md-ellipsis">
+      Quantum Machine Learning Pipeline
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-strategies">
+<span class="md-ellipsis">
+      🔧 Implementation Strategies
+    </span>
+</a>
+<nav aria-label="🔧 Implementation Strategies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#near-term-quantum-computing-nisq">
+<span class="md-ellipsis">
+      Near-Term Quantum Computing (NISQ)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-enhanced-ai-architecture">
+<span class="md-ellipsis">
+      Quantum-Enhanced AI Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-classical-interfaces">
+<span class="md-ellipsis">
+      🌐 Quantum-Classical Interfaces
+    </span>
+</a>
+<nav aria-label="🌐 Quantum-Classical Interfaces" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-transfer-mechanisms">
+<span class="md-ellipsis">
+      State Transfer Mechanisms
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-protocols">
+<span class="md-ellipsis">
+      Communication Protocols
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-frameworks">
+<span class="md-ellipsis">
+      🛠️ Development Frameworks
+    </span>
+</a>
+<nav aria-label="🛠️ Development Frameworks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-software-stack">
+<span class="md-ellipsis">
+      Quantum Software Stack
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-characteristics">
+<span class="md-ellipsis">
+      📊 Performance Characteristics
+    </span>
+</a>
+<nav aria-label="📊 Performance Characteristics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-vs-classical-performance">
+<span class="md-ellipsis">
+      Quantum vs Classical Performance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hybrid-system-optimization">
+<span class="md-ellipsis">
+      Hybrid System Optimization
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-in-quantumlangchain">
+<span class="md-ellipsis">
+      🎯 Applications in QuantumLangChain
+    </span>
+</a>
+<nav aria-label="🎯 Applications in QuantumLangChain" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-enhanced-language-processing">
+<span class="md-ellipsis">
+      Quantum-Enhanced Language Processing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#memory-and-knowledge-systems">
+<span class="md-ellipsis">
+      Memory and Knowledge Systems
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-requirements">
+<span class="md-ellipsis">
+      🔐 License Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-developments">
+<span class="md-ellipsis">
+      🚀 Future Developments
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="quantum-classical-hybrid-systems">🔗 Quantum-Classical Hybrid Systems<a class="headerlink" href="#quantum-classical-hybrid-systems" title="Permanent link">¶</a></h1>
+<p>🔐 <strong>Licensed Component</strong> - Contact: <a href="mailto:bajpaikrishna715@gmail.com">bajpaikrishna715@gmail.com</a> for licensing</p>
+<h2 id="hybrid-architecture-overview">Hybrid Architecture Overview<a class="headerlink" href="#hybrid-architecture-overview" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph TB
+    subgraph "Classical Computing Layer"
+        A[CPU Processing]
+        B[Memory Management]
+        C[I/O Operations]
+        D[Classical Algorithms]
+    end
+
+    subgraph "Quantum Computing Layer"
+        E[Quantum Processors]
+        F[Quantum Memory]
+        G[Quantum Gates]
+        H[Quantum Algorithms]
+    end
+
+    subgraph "Hybrid Interface"
+        I[State Encoding]
+        J[Parameter Optimization]
+        K[Measurement Processing]
+        L[Error Correction]
+    end
+
+    subgraph "Applications"
+        M[AI/ML Models]
+        N[Optimization Problems]
+        O[Simulation Tasks]
+        P[Cryptography]
+    end
+
+    A &lt;--&gt; I
+    B &lt;--&gt; J
+    C &lt;--&gt; K
+    D &lt;--&gt; L
+
+    E &lt;--&gt; I
+    F &lt;--&gt; J
+    G &lt;--&gt; K
+    H &lt;--&gt; L
+
+    I --&gt; M
+    J --&gt; N
+    K --&gt; O
+    L --&gt; P</code></pre>
+<h2 id="hybrid-computing-paradigms">🌟 Hybrid Computing Paradigms<a class="headerlink" href="#hybrid-computing-paradigms" title="Permanent link">¶</a></h2>
+<h3 id="variational-quantum-algorithms">Variational Quantum Algorithms<a class="headerlink" href="#variational-quantum-algorithms" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Classical Optimizer"
+        A[Parameter Update]
+        B[Cost Function]
+        C[Gradient Computation]
+        D[Convergence Check]
+    end
+
+    subgraph "Quantum Processor"
+        E[Parameterized Circuit]
+        F[Quantum Execution]
+        G[Measurement]
+        H[Expectation Values]
+    end
+
+    A --&gt; E
+    E --&gt; F
+    F --&gt; G
+    G --&gt; H
+    H --&gt; B
+    B --&gt; C
+    C --&gt; A
+
+    D --&gt; I[Optimized Solution]</code></pre>
+<h3 id="quantum-classical-feedback-loop">Quantum-Classical Feedback Loop<a class="headerlink" href="#quantum-classical-feedback-loop" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Feedback Loop"
+        A[Classical Preprocessing]
+        B[Quantum State Preparation]
+        C[Quantum Circuit Execution]
+        D[Quantum Measurement]
+        E[Classical Postprocessing]
+        F[Parameter Update]
+    end
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; A
+
+    subgraph "Optimization"
+        G[Cost Function]
+        H[Gradient Estimation]
+        I[Parameter Space Search]
+    end
+
+    E --&gt; G
+    G --&gt; H
+    H --&gt; I
+    I --&gt; F</code></pre>
+<h2 id="quantum-advantage-in-hybrid-systems">⚛️ Quantum Advantage in Hybrid Systems<a class="headerlink" href="#quantum-advantage-in-hybrid-systems" title="Permanent link">¶</a></h2>
+<h3 id="computational-complexity-comparison">Computational Complexity Comparison<a class="headerlink" href="#computational-complexity-comparison" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Problem Classes"
+        A[P - Polynomial Time]
+        B[NP - Nondeterministic Polynomial]
+        C[BQP - Bounded Quantum Polynomial]
+        D[QMA - Quantum Merlin Arthur]
+    end
+
+    subgraph "Quantum Speedup"
+        E[Exponential Speedup]
+        F[Polynomial Speedup]
+        G[Constant Speedup]
+        H[No Speedup]
+    end
+
+    subgraph "Applications"
+        I[Factoring - Shor's]
+        J[Search - Grover's]
+        K[Simulation]
+        L[Optimization]
+    end
+
+    A --&gt; H
+    B --&gt; F
+    C --&gt; E
+    D --&gt; E
+
+    E --&gt; I
+    F --&gt; J
+    E --&gt; K
+    F --&gt; L</code></pre>
+<h3 id="quantum-machine-learning-pipeline">Quantum Machine Learning Pipeline<a class="headerlink" href="#quantum-machine-learning-pipeline" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Data Pipeline"
+        A[Classical Data]
+        B[Feature Engineering]
+        C[Quantum Encoding]
+        D[Quantum Processing]
+        E[Classical Decoding]
+        F[Results]
+    end
+
+    subgraph "Model Types"
+        G[Quantum Kernels]
+        H[Variational Classifiers]
+        I[Quantum Neural Networks]
+        J[Quantum Generative Models]
+    end
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+
+    D --&gt; G
+    D --&gt; H
+    D --&gt; I
+    D --&gt; J</code></pre>
+<h2 id="implementation-strategies">🔧 Implementation Strategies<a class="headerlink" href="#implementation-strategies" title="Permanent link">¶</a></h2>
+<h3 id="near-term-quantum-computing-nisq">Near-Term Quantum Computing (NISQ)<a class="headerlink" href="#near-term-quantum-computing-nisq" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "NISQ Characteristics"
+        A[Limited Qubits - 50-1000]
+        B[High Noise Levels]
+        C[Short Coherence Times]
+        D[No Error Correction]
+    end
+
+    subgraph "NISQ Algorithms"
+        E[Variational Quantum Eigensolver]
+        F[Quantum Approximate Optimization]
+        G[Quantum Machine Learning]
+        H[Quantum Chemistry Simulation]
+    end
+
+    subgraph "Classical Support"
+        I[Error Mitigation]
+        J[Parameter Optimization]
+        K[Post Selection]
+        L[Noise Modeling]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h3 id="quantum-enhanced-ai-architecture">Quantum-Enhanced AI Architecture<a class="headerlink" href="#quantum-enhanced-ai-architecture" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Classical AI Layer"
+        A[Large Language Models]
+        B[Deep Neural Networks]
+        C[Traditional ML]
+        D[Rule-Based Systems]
+    end
+
+    subgraph "Quantum Enhancement Layer"
+        E[Quantum Feature Maps]
+        F[Quantum Kernels]
+        G[Quantum Optimizers]
+        H[Quantum Memory]
+    end
+
+    subgraph "Hybrid AI System"
+        I[Enhanced Reasoning]
+        J[Quantum Speedup]
+        K[Novel Algorithms]
+        L[Improved Accuracy]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h2 id="quantum-classical-interfaces">🌐 Quantum-Classical Interfaces<a class="headerlink" href="#quantum-classical-interfaces" title="Permanent link">¶</a></h2>
+<h3 id="state-transfer-mechanisms">State Transfer Mechanisms<a class="headerlink" href="#state-transfer-mechanisms" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Classical to Quantum"
+        A[Bit String]
+        B[Amplitude Encoding]
+        C[Angle Encoding]
+        D[Basis Encoding]
+    end
+
+    subgraph "Quantum to Classical"
+        E[Measurement]
+        F[Sampling]
+        G[Expectation Values]
+        H[Probability Distributions]
+    end
+
+    subgraph "Bidirectional"
+        I[Parameter Updates]
+        J[Feedback Loops]
+        K[Adaptive Circuits]
+        L[Dynamic Programming]
+    end
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+
+    E --&gt; F
+    F --&gt; G
+    G --&gt; H
+
+    I --&gt; J
+    J --&gt; K
+    K --&gt; L</code></pre>
+<h3 id="communication-protocols">Communication Protocols<a class="headerlink" href="#communication-protocols" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Synchronous Communication"
+        A[Blocking Calls]
+        B[Sequential Execution]
+        C[Deterministic Timing]
+    end
+
+    subgraph "Asynchronous Communication"
+        D[Non-blocking Calls]
+        E[Parallel Execution]
+        F[Event-driven]
+    end
+
+    subgraph "Hybrid Protocols"
+        G[Mixed Mode]
+        H[Adaptive Scheduling]
+        I[Resource Management]
+    end
+
+    A --&gt; G
+    B --&gt; H
+    C --&gt; I
+
+    D --&gt; G
+    E --&gt; H
+    F --&gt; I</code></pre>
+<h2 id="development-frameworks">🛠️ Development Frameworks<a class="headerlink" href="#development-frameworks" title="Permanent link">¶</a></h2>
+<h3 id="quantum-software-stack">Quantum Software Stack<a class="headerlink" href="#quantum-software-stack" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Application Layer"
+        A[QuantumLangChain]
+        B[Quantum ML Apps]
+        C[Optimization Tools]
+        D[Simulation Software]
+    end
+
+    subgraph "Framework Layer"
+        E[Qiskit]
+        F[PennyLane]
+        G[Cirq]
+        H[Amazon Braket]
+    end
+
+    subgraph "Compiler Layer"
+        I[Circuit Optimization]
+        J[Gate Decomposition]
+        K[Noise Adaptation]
+        L[Hardware Mapping]
+    end
+
+    subgraph "Hardware Layer"
+        M[IBM Quantum]
+        N[Google Quantum]
+        O[IonQ]
+        P[Rigetti]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L
+
+    I --&gt; M
+    J --&gt; N
+    K --&gt; O
+    L --&gt; P</code></pre>
+<h2 id="performance-characteristics">📊 Performance Characteristics<a class="headerlink" href="#performance-characteristics" title="Permanent link">¶</a></h2>
+<h3 id="quantum-vs-classical-performance">Quantum vs Classical Performance<a class="headerlink" href="#quantum-vs-classical-performance" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Performance Metrics"
+        A[Execution Time]
+        B[Solution Quality]
+        C[Resource Usage]
+        D[Scalability]
+    end
+
+    subgraph "Classical Advantages"
+        E[Maturity]
+        F[Stability]
+        G[Low Cost]
+        H[Wide Availability]
+    end
+
+    subgraph "Quantum Advantages"
+        I[Exponential Speedup]
+        J[Novel Algorithms]
+        K[Parallel Processing]
+        L[Quantum Effects]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    A --&gt; I
+    B --&gt; J
+    C --&gt; K
+    D --&gt; L</code></pre>
+<h3 id="hybrid-system-optimization">Hybrid System Optimization<a class="headerlink" href="#hybrid-system-optimization" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Optimization Targets"
+        A[Minimize Quantum Calls]
+        B[Maximize Classical Processing]
+        C[Balance Workload]
+        D[Reduce Communication]
+    end
+
+    subgraph "Optimization Techniques"
+        E[Circuit Batching]
+        F[Parameter Caching]
+        G[Parallel Execution]
+        H[Adaptive Switching]
+    end
+
+    subgraph "Performance Gains"
+        I[Reduced Latency]
+        J[Higher Throughput]
+        K[Better Resource Utilization]
+        L[Cost Optimization]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h2 id="applications-in-quantumlangchain">🎯 Applications in QuantumLangChain<a class="headerlink" href="#applications-in-quantumlangchain" title="Permanent link">¶</a></h2>
+<h3 id="quantum-enhanced-language-processing">Quantum-Enhanced Language Processing<a class="headerlink" href="#quantum-enhanced-language-processing" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Classical NLP"
+        A[Tokenization]
+        B[Embedding]
+        C[Attention]
+        D[Generation]
+    end
+
+    subgraph "Quantum Enhancement"
+        E[Quantum Embedding]
+        F[Quantum Attention]
+        G[Superposition States]
+        H[Entangled Representations]
+    end
+
+    subgraph "Hybrid NLP Pipeline"
+        I[Enhanced Understanding]
+        J[Improved Reasoning]
+        K[Novel Capabilities]
+        L[Quantum Advantage]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h3 id="memory-and-knowledge-systems">Memory and Knowledge Systems<a class="headerlink" href="#memory-and-knowledge-systems" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Classical Memory"
+        A[Vector Stores]
+        B[Graph Databases]
+        C[Relational DBs]
+        D[Cache Systems]
+    end
+
+    subgraph "Quantum Memory"
+        E[Quantum States]
+        F[Entangled Storage]
+        G[Superposition Access]
+        H[Quantum Retrieval]
+    end
+
+    subgraph "Hybrid Memory"
+        I[Best of Both Worlds]
+        J[Quantum-Enhanced Search]
+        K[Parallel Access]
+        L[Novel Storage Patterns]
+    end
+
+    A --&gt; I
+    B --&gt; J
+    C --&gt; K
+    D --&gt; L
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h2 id="license-requirements">🔐 License Requirements<a class="headerlink" href="#license-requirements" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Basic Hybrid Concepts</strong>: Basic license tier</li>
+<li><strong>Advanced Implementations</strong>: Professional license tier</li>
+<li><strong>Custom Hybrid Systems</strong>: Enterprise license tier</li>
+<li><strong>Research Applications</strong>: Research license tier</li>
+</ul>
+<p>Contact <a href="mailto:bajpaikrishna715@gmail.com">bajpaikrishna715@gmail.com</a> for licensing.</p>
+<h2 id="future-developments">🚀 Future Developments<a class="headerlink" href="#future-developments" title="Permanent link">¶</a></h2>
+<p>The future of quantum-classical hybrid systems promises:</p>
+<ul>
+<li><strong>Fault-tolerant quantum computing</strong></li>
+<li><strong>Advanced error correction</strong></li>
+<li><strong>Seamless integration</strong></li>
+<li><strong>Quantum internet connectivity</strong></li>
+<li><strong>AI-quantum convergence</strong></li>
+</ul>
+<p>QuantumLangChain positions itself at the forefront of this hybrid revolution.</p>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      © 2025 Krishna Bajpai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/krish567366/Quantum-Langchain" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://pypi.org/project/quantumlangchain/" rel="noopener" target="_blank" title="pypi.org">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:bajpaikrishna715@gmail.com" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-consent" data-md-component="consent" hidden="" id="__consent">
+<div class="md-consent__overlay"></div>
+<aside class="md-consent__inner">
+<form class="md-consent__form md-grid md-typeset" name="consent">
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" id="__settings" type="checkbox"/>
+<div class="md-consent__settings">
+<ul class="task-list">
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="analytics" type="checkbox"/>
+<span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+</li>
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="github" type="checkbox"/>
+<span class="task-list-indicator"></span>
+      GitHub
+    </label>
+</li>
+</ul>
+</div>
+<div class="md-consent__controls">
+<button class="md-button md-button--primary">Accept</button>
+<label class="md-button" for="__settings">Manage settings</label>
+</div>
+</form>
+</aside>
+</div>
+<script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

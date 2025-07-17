@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "quantumlangchain"
-version = "0.1.0"
+version = "1.0.0"
 description = "🔐 LICENSED: A composable framework for quantum-inspired reasoning, entangled memory systems, and multi-agent cooperation"
 readme = "README.md"
 license = { text = "Commercial License" }

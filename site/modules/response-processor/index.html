@@ -1,0 +1,2038 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="LICENSED SOFTWARE – A composable framework for quantum-inspired reasoning, entangled memory systems, and multi-agent cooperation. Contact bajpaikrishna715@gmail.com for licensing." name="description"/>
+<meta content="Krishna Bajpai" name="author"/>
+<link href="https://krish567366.github.io/Quantum-Langchain/modules/response-processor/" rel="canonical"/>
+<link href="../quantum-retriever/" rel="prev"/>
+<link href="../tool-executor/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>ResponseProcessor - QuantumLangChain</title>
+<link href="../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="https://unpkg.com/katex@0/dist/katex.min.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-6LNSVBM0Z9"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-6LNSVBM0Z9",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-6LNSVBM0Z9",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+</head>
+<body data-md-color-accent="cyan" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#response-processor-module">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="QuantumLangChain" class="md-header__button md-logo" data-md-component="logo" href="../.." title="QuantumLangChain">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            QuantumLangChain
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ResponseProcessor
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<a aria-label="Share" class="md-search__icon md-icon" data-clipboard="" data-clipboard-text="" data-md-component="search-share" href="javascript:void(0)" tabindex="-1" title="Share">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+</a>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/krish567366/Quantum-Langchain" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    krish567366/Quantum-Langchain
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../licensing/overview/">
+          
+  
+  
+    
+  
+  Licensing
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../getting-started/installation/">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../theory-architecture/">
+          
+  
+  
+    
+  
+  Theory &amp; Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../qlchain/">
+          
+  
+  
+    
+  
+  Core Modules
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../backends/">
+          
+  
+  
+    
+  
+  Backends
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../vectorstores/overview/">
+          
+  
+  
+    
+  
+  Vector Stores
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-guide/">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../examples/">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../best-practices/">
+        
+  
+  
+    
+  
+  Best Practices
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../architecture/">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../getting-started/">
+        
+  
+  
+    
+  
+  Getting Started Guide
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../deployment/">
+        
+  
+  
+    
+  
+  Deployment
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tutorials/">
+        
+  
+  
+    
+  
+  Tutorials
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../api/">
+          
+  
+  
+    
+  
+  API Reference
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../development/contributing/">
+          
+  
+  
+    
+  
+  Development
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../about/license/">
+          
+  
+  
+    
+  
+  About
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="QuantumLangChain" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="QuantumLangChain">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    QuantumLangChain
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/krish567366/Quantum-Langchain" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    krish567366/Quantum-Langchain
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Licensing
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Licensing
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../licensing/overview/">
+<span class="md-ellipsis">
+    License Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../license-integration/">
+<span class="md-ellipsis">
+    License Integration Guide
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../licensing/pricing/">
+<span class="md-ellipsis">
+    Pricing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../licensing/support/">
+<span class="md-ellipsis">
+    Support
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/installation/">
+<span class="md-ellipsis">
+    Installation
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/quick-start/">
+<span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/examples/">
+<span class="md-ellipsis">
+    Basic Examples
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/configuration/">
+<span class="md-ellipsis">
+    Configuration
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Theory &amp; Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Theory &amp; Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../theory-architecture/">
+<span class="md-ellipsis">
+    Complete Theory
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/architecture/">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/quantum-basics/">
+<span class="md-ellipsis">
+    Quantum Computing Basics
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/quantum-computing/">
+<span class="md-ellipsis">
+    Quantum Computing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/hybrid-systems/">
+<span class="md-ellipsis">
+    Quantum-Classical Hybrid Systems
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/entanglement/">
+<span class="md-ellipsis">
+    Entanglement in AI
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/decoherence/">
+<span class="md-ellipsis">
+    Decoherence and Error Correction
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../concepts/memory-models/">
+<span class="md-ellipsis">
+    Quantum Memory Models
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    Core Modules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Core Modules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../qlchain/">
+<span class="md-ellipsis">
+    QLChain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quantum-memory/">
+<span class="md-ellipsis">
+    QuantumMemory
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../entangled-agents/">
+<span class="md-ellipsis">
+    EntangledAgents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quantum-retriever/">
+<span class="md-ellipsis">
+    QuantumRetriever
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    ResponseProcessor
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    ResponseProcessor
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-processing-architecture">
+<span class="md-ellipsis">
+      Response Processing Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-features">
+<span class="md-ellipsis">
+      🌟 Core Features
+    </span>
+</a>
+<nav aria-label="🌟 Core Features" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-response-processing">
+<span class="md-ellipsis">
+      Quantum Response Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation">
+<span class="md-ellipsis">
+      🔧 Implementation
+    </span>
+</a>
+<nav aria-label="🔧 Implementation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-response-processor">
+<span class="md-ellipsis">
+      Basic Response Processor
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-multi-stage-response-processor">
+<span class="md-ellipsis">
+      Advanced Multi-Stage Response Processor
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adaptive-response-processing">
+<span class="md-ellipsis">
+      Adaptive Response Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-types">
+<span class="md-ellipsis">
+      🎯 Response Types
+    </span>
+</a>
+<nav aria-label="🎯 Response Types" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-categories">
+<span class="md-ellipsis">
+      Response Categories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-processing-pipeline">
+<span class="md-ellipsis">
+      Response Processing Pipeline
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-metrics">
+<span class="md-ellipsis">
+      📊 Quality Metrics
+    </span>
+</a>
+<nav aria-label="📊 Quality Metrics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-quality-assessment">
+<span class="md-ellipsis">
+      Response Quality Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-enhancement-system">
+<span class="md-ellipsis">
+      Quality Enhancement System
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-integration">
+<span class="md-ellipsis">
+      🔒 License Integration
+    </span>
+</a>
+<nav aria-label="🔒 License Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-processing-restrictions">
+<span class="md-ellipsis">
+      Response Processing Restrictions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-enforcement">
+<span class="md-ellipsis">
+      License Enforcement
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api-reference">
+<span class="md-ellipsis">
+      📚 API Reference
+    </span>
+</a>
+<nav aria-label="📚 API Reference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-response-classes">
+<span class="md-ellipsis">
+      Core Response Classes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-enhancements">
+<span class="md-ellipsis">
+      🔮 Future Enhancements
+    </span>
+</a>
+<nav aria-label="🔮 Future Enhancements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#planned-response-features">
+<span class="md-ellipsis">
+      Planned Response Features
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-requirements">
+<span class="md-ellipsis">
+      🔐 License Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tool-executor/">
+<span class="md-ellipsis">
+    QuantumToolExecutor
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quantum-chains/">
+<span class="md-ellipsis">
+    QuantumChain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../prompt-chain/">
+<span class="md-ellipsis">
+    QPromptChain
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../context-manager/">
+<span class="md-ellipsis">
+    QuantumContextManager
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Backends
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Backends
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../backends/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/qiskit/">
+<span class="md-ellipsis">
+    Qiskit Backend
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/pennylane/">
+<span class="md-ellipsis">
+    PennyLane Backend
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/braket/">
+<span class="md-ellipsis">
+    Braket Backend
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../backends/custom/">
+<span class="md-ellipsis">
+    Custom Backends
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Vector Stores
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Vector Stores
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/overview/">
+<span class="md-ellipsis">
+    Overview
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/chromadb/">
+<span class="md-ellipsis">
+    Hybrid ChromaDB
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/faiss/">
+<span class="md-ellipsis">
+    Quantum FAISS
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../vectorstores/integration/">
+<span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-guide/">
+<span class="md-ellipsis">
+    User Guide
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../examples/">
+<span class="md-ellipsis">
+    Examples
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../best-practices/">
+<span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../getting-started/">
+<span class="md-ellipsis">
+    Getting Started Guide
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../deployment/">
+<span class="md-ellipsis">
+    Deployment
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tutorials/">
+<span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../api/">
+<span class="md-ellipsis">
+    API Reference
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_15_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/overview/">
+<span class="md-ellipsis">
+    Complete API
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/core/">
+<span class="md-ellipsis">
+    Core
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/chains/">
+<span class="md-ellipsis">
+    Chains
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/memory/">
+<span class="md-ellipsis">
+    Memory
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/agents/">
+<span class="md-ellipsis">
+    Agents
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/retrievers/">
+<span class="md-ellipsis">
+    Retrievers
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/backends.md">
+<span class="md-ellipsis">
+    Backends
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../api/licensing.md">
+<span class="md-ellipsis">
+    Licensing
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+<span class="md-ellipsis">
+    Development
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_16_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
+<span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/contributing/">
+<span class="md-ellipsis">
+    Contributing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/architecture/">
+<span class="md-ellipsis">
+    Architecture
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/testing/">
+<span class="md-ellipsis">
+    Testing
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/performance/">
+<span class="md-ellipsis">
+    Performance
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../development/security/">
+<span class="md-ellipsis">
+    Security
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+<span class="md-ellipsis">
+    About
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_17_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_17">
+<span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/license/">
+<span class="md-ellipsis">
+    License
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/changelog/">
+<span class="md-ellipsis">
+    Changelog
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/roadmap/">
+<span class="md-ellipsis">
+    Roadmap
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/faq/">
+<span class="md-ellipsis">
+    FAQ
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-processing-architecture">
+<span class="md-ellipsis">
+      Response Processing Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-features">
+<span class="md-ellipsis">
+      🌟 Core Features
+    </span>
+</a>
+<nav aria-label="🌟 Core Features" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quantum-response-processing">
+<span class="md-ellipsis">
+      Quantum Response Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation">
+<span class="md-ellipsis">
+      🔧 Implementation
+    </span>
+</a>
+<nav aria-label="🔧 Implementation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-response-processor">
+<span class="md-ellipsis">
+      Basic Response Processor
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advanced-multi-stage-response-processor">
+<span class="md-ellipsis">
+      Advanced Multi-Stage Response Processor
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adaptive-response-processing">
+<span class="md-ellipsis">
+      Adaptive Response Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-types">
+<span class="md-ellipsis">
+      🎯 Response Types
+    </span>
+</a>
+<nav aria-label="🎯 Response Types" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-categories">
+<span class="md-ellipsis">
+      Response Categories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-processing-pipeline">
+<span class="md-ellipsis">
+      Response Processing Pipeline
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-metrics">
+<span class="md-ellipsis">
+      📊 Quality Metrics
+    </span>
+</a>
+<nav aria-label="📊 Quality Metrics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-quality-assessment">
+<span class="md-ellipsis">
+      Response Quality Assessment
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-enhancement-system">
+<span class="md-ellipsis">
+      Quality Enhancement System
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-integration">
+<span class="md-ellipsis">
+      🔒 License Integration
+    </span>
+</a>
+<nav aria-label="🔒 License Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#response-processing-restrictions">
+<span class="md-ellipsis">
+      Response Processing Restrictions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-enforcement">
+<span class="md-ellipsis">
+      License Enforcement
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#api-reference">
+<span class="md-ellipsis">
+      📚 API Reference
+    </span>
+</a>
+<nav aria-label="📚 API Reference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-response-classes">
+<span class="md-ellipsis">
+      Core Response Classes
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-enhancements">
+<span class="md-ellipsis">
+      🔮 Future Enhancements
+    </span>
+</a>
+<nav aria-label="🔮 Future Enhancements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#planned-response-features">
+<span class="md-ellipsis">
+      Planned Response Features
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license-requirements">
+<span class="md-ellipsis">
+      🔐 License Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="response-processor-module">🔧 Response Processor Module<a class="headerlink" href="#response-processor-module" title="Permanent link">¶</a></h1>
+<p>🔐 <strong>Licensed Component</strong> - Contact: <a href="mailto:bajpaikrishna715@gmail.com">bajpaikrishna715@gmail.com</a> for licensing</p>
+<h2 id="response-processing-architecture">Response Processing Architecture<a class="headerlink" href="#response-processing-architecture" title="Permanent link">¶</a></h2>
+<pre class="mermaid"><code>graph TB
+    subgraph "Response Generation"
+        A[Raw Response Generation]
+        B[Content Structuring]
+        C[Quality Enhancement]
+        D[Format Optimization]
+    end
+
+    subgraph "Processing Layers"
+        E[Syntax Processing]
+        F[Semantic Processing]
+        G[Pragmatic Processing]
+        H[Style Processing]
+    end
+
+    subgraph "Quantum Enhancement"
+        I[Superposition Responses]
+        J[Entangled Reasoning]
+        K[Coherent Output]
+        L[Quantum Optimization]
+    end
+
+    subgraph "Output Control"
+        M[Format Control]
+        N[Quality Assurance]
+        O[Response Validation]
+        P[Delivery Optimization]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L
+
+    I --&gt; M
+    J --&gt; N
+    K --&gt; O
+    L --&gt; P</code></pre>
+<h2 id="core-features">🌟 Core Features<a class="headerlink" href="#core-features" title="Permanent link">¶</a></h2>
+<h3 id="quantum-response-processing">Quantum Response Processing<a class="headerlink" href="#quantum-response-processing" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Classical Response"
+        A[Linear Processing]
+        B[Single Path Generation]
+        C[Limited Optimization]
+        D[Basic Quality Control]
+    end
+
+    subgraph "Quantum Response"
+        E[Parallel Processing]
+        F[Multi-Path Generation]
+        G[Advanced Optimization]
+        H[Quantum Quality Control]
+    end
+
+    subgraph "Enhanced Capabilities"
+        I[Superior Quality]
+        J[Rich Content]
+        K[Optimized Format]
+        L[Intelligent Adaptation]
+    end
+
+    A --&gt; I
+    B --&gt; J
+    C --&gt; K
+    D --&gt; L
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h2 id="implementation">🔧 Implementation<a class="headerlink" href="#implementation" title="Permanent link">¶</a></h2>
+<h3 id="basic-response-processor">Basic Response Processor<a class="headerlink" href="#basic-response-processor" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantumlangchain.response</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumResponseProcessor</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># Initialize response processor</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">response_processor</span> <span class="o">=</span> <span class="n">QuantumResponseProcessor</span><span class="p">(</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">max_response_length</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">quality_threshold</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="n">quantum_optimization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="n">multi_format_support</span><span class="o">=</span><span class="kc">True</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">)</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># Process a raw response</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">raw_response</span> <span class="o">=</span> <span class="s2">"This is a basic response that needs processing."</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">processed_response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">response_processor</span><span class="o">.</span><span class="n">process_response</span><span class="p">(</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">raw_response</span><span class="p">,</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="n">target_format</span><span class="o">=</span><span class="s2">"markdown"</span><span class="p">,</span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">quality_level</span><span class="o">=</span><span class="s2">"high"</span><span class="p">,</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">style</span><span class="o">=</span><span class="s2">"professional"</span>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">)</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">processed_response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Quality Score: </span><span class="si">{</span><span class="n">processed_response</span><span class="o">.</span><span class="n">quality_score</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Processing Time: </span><span class="si">{</span><span class="n">processed_response</span><span class="o">.</span><span class="n">processing_time</span><span class="si">}</span><span class="s2">ms"</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="advanced-multi-stage-response-processor">Advanced Multi-Stage Response Processor<a class="headerlink" href="#advanced-multi-stage-response-processor" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantumlangchain.response</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiStageResponseProcessor</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">AdvancedResponseSystem</span><span class="p">:</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">response_processor</span> <span class="o">=</span> <span class="n">MultiStageResponseProcessor</span><span class="p">(</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>            <span class="n">stages</span><span class="o">=</span><span class="p">[</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>                <span class="s2">"content_analysis"</span><span class="p">,</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>                <span class="s2">"structure_optimization"</span><span class="p">,</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>                <span class="s2">"quality_enhancement"</span><span class="p">,</span>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>                <span class="s2">"format_adaptation"</span><span class="p">,</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>                <span class="s2">"style_refinement"</span><span class="p">,</span>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>                <span class="s2">"final_validation"</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>            <span class="p">],</span>
+</span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>            <span class="n">quantum_processing</span><span class="o">=</span><span class="kc">True</span>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a>        <span class="p">)</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>        <span class="c1"># Specialized processors</span>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">content_analyzer</span> <span class="o">=</span> <span class="n">ContentAnalyzer</span><span class="p">()</span>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">structure_optimizer</span> <span class="o">=</span> <span class="n">StructureOptimizer</span><span class="p">()</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">quality_enhancer</span> <span class="o">=</span> <span class="n">QualityEnhancer</span><span class="p">()</span>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">format_adapter</span> <span class="o">=</span> <span class="n">FormatAdapter</span><span class="p">()</span>
+</span><span id="__span-1-22"><a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">style_refiner</span> <span class="o">=</span> <span class="n">StyleRefiner</span><span class="p">()</span>
+</span><span id="__span-1-23"><a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">validator</span> <span class="o">=</span> <span class="n">ResponseValidator</span><span class="p">()</span>
+</span><span id="__span-1-24"><a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">process_advanced_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_response</span><span class="p">,</span> <span class="n">requirements</span><span class="p">):</span>
+</span><span id="__span-1-26"><a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="sd">"""Process response with advanced multi-stage processing."""</span>
+</span><span id="__span-1-27"><a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a>        <span class="c1"># Stage 1: Content Analysis</span>
+</span><span id="__span-1-28"><a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a>        <span class="n">content_analysis</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_analyzer</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span>
+</span><span id="__span-1-29"><a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a>            <span class="n">raw_response</span><span class="p">,</span>
+</span><span id="__span-1-30"><a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a>            <span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"analysis_depth"</span><span class="p">,</span> <span class="s2">"standard"</span><span class="p">)</span>
+</span><span id="__span-1-31"><a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a>        <span class="p">)</span>
+</span><span id="__span-1-32"><a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a>        <span class="c1"># Stage 2: Structure Optimization</span>
+</span><span id="__span-1-34"><a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a>        <span class="n">optimized_structure</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">structure_optimizer</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span>
+</span><span id="__span-1-35"><a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a>            <span class="n">raw_response</span><span class="p">,</span>
+</span><span id="__span-1-36"><a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a>            <span class="n">content_analysis</span><span class="p">,</span>
+</span><span id="__span-1-37"><a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a>            <span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"structure_type"</span><span class="p">,</span> <span class="s2">"auto"</span><span class="p">)</span>
+</span><span id="__span-1-38"><a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a>        <span class="p">)</span>
+</span><span id="__span-1-39"><a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a>
+</span><span id="__span-1-40"><a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a>        <span class="c1"># Stage 3: Quality Enhancement</span>
+</span><span id="__span-1-41"><a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a>        <span class="n">enhanced_content</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">quality_enhancer</span><span class="o">.</span><span class="n">enhance</span><span class="p">(</span>
+</span><span id="__span-1-42"><a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a>            <span class="n">optimized_structure</span><span class="p">,</span>
+</span><span id="__span-1-43"><a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a>            <span class="n">target_quality</span><span class="o">=</span><span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"quality_level"</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
+</span><span id="__span-1-44"><a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a>        <span class="p">)</span>
+</span><span id="__span-1-45"><a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a>
+</span><span id="__span-1-46"><a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a>        <span class="c1"># Stage 4: Format Adaptation</span>
+</span><span id="__span-1-47"><a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a>        <span class="n">formatted_content</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_adapter</span><span class="o">.</span><span class="n">adapt</span><span class="p">(</span>
+</span><span id="__span-1-48"><a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a>            <span class="n">enhanced_content</span><span class="p">,</span>
+</span><span id="__span-1-49"><a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a>            <span class="n">target_format</span><span class="o">=</span><span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"format"</span><span class="p">,</span> <span class="s2">"text"</span><span class="p">),</span>
+</span><span id="__span-1-50"><a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a>            <span class="n">format_options</span><span class="o">=</span><span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"format_options"</span><span class="p">,</span> <span class="p">{})</span>
+</span><span id="__span-1-51"><a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a>        <span class="p">)</span>
+</span><span id="__span-1-52"><a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a>
+</span><span id="__span-1-53"><a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a>        <span class="c1"># Stage 5: Style Refinement</span>
+</span><span id="__span-1-54"><a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a>        <span class="n">refined_content</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_refiner</span><span class="o">.</span><span class="n">refine</span><span class="p">(</span>
+</span><span id="__span-1-55"><a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a>            <span class="n">formatted_content</span><span class="p">,</span>
+</span><span id="__span-1-56"><a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a>            <span class="n">style</span><span class="o">=</span><span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"style"</span><span class="p">,</span> <span class="s2">"neutral"</span><span class="p">),</span>
+</span><span id="__span-1-57"><a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a>            <span class="n">tone</span><span class="o">=</span><span class="n">requirements</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"tone"</span><span class="p">,</span> <span class="s2">"professional"</span><span class="p">)</span>
+</span><span id="__span-1-58"><a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a>        <span class="p">)</span>
+</span><span id="__span-1-59"><a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a>
+</span><span id="__span-1-60"><a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a>        <span class="c1"># Stage 6: Final Validation</span>
+</span><span id="__span-1-61"><a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a>        <span class="n">final_response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">validator</span><span class="o">.</span><span class="n">validate_and_finalize</span><span class="p">(</span>
+</span><span id="__span-1-62"><a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a>            <span class="n">refined_content</span><span class="p">,</span>
+</span><span id="__span-1-63"><a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a>            <span class="n">requirements</span>
+</span><span id="__span-1-64"><a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a>        <span class="p">)</span>
+</span><span id="__span-1-65"><a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a>
+</span><span id="__span-1-66"><a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a>        <span class="k">return</span> <span class="n">final_response</span>
+</span><span id="__span-1-67"><a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a>
+</span><span id="__span-1-68"><a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">quantum_response_generation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+</span><span id="__span-1-69"><a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w">        </span><span class="sd">"""Generate response using quantum processing."""</span>
+</span><span id="__span-1-70"><a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a>        <span class="c1"># Create superposition of possible responses</span>
+</span><span id="__span-1-71"><a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a>        <span class="n">response_superposition</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_response_superposition</span><span class="p">(</span>
+</span><span id="__span-1-72"><a href="#__codelineno-1-72" id="__codelineno-1-72" name="__codelineno-1-72"></a>            <span class="n">query</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">options</span>
+</span><span id="__span-1-73"><a href="#__codelineno-1-73" id="__codelineno-1-73" name="__codelineno-1-73"></a>        <span class="p">)</span>
+</span><span id="__span-1-74"><a href="#__codelineno-1-74" id="__codelineno-1-74" name="__codelineno-1-74"></a>
+</span><span id="__span-1-75"><a href="#__codelineno-1-75" id="__codelineno-1-75" name="__codelineno-1-75"></a>        <span class="c1"># Apply quantum optimization</span>
+</span><span id="__span-1-76"><a href="#__codelineno-1-76" id="__codelineno-1-76" name="__codelineno-1-76"></a>        <span class="n">optimized_responses</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantum_optimize_responses</span><span class="p">(</span>
+</span><span id="__span-1-77"><a href="#__codelineno-1-77" id="__codelineno-1-77" name="__codelineno-1-77"></a>            <span class="n">response_superposition</span>
+</span><span id="__span-1-78"><a href="#__codelineno-1-78" id="__codelineno-1-78" name="__codelineno-1-78"></a>        <span class="p">)</span>
+</span><span id="__span-1-79"><a href="#__codelineno-1-79" id="__codelineno-1-79" name="__codelineno-1-79"></a>
+</span><span id="__span-1-80"><a href="#__codelineno-1-80" id="__codelineno-1-80" name="__codelineno-1-80"></a>        <span class="c1"># Collapse to best response through measurement</span>
+</span><span id="__span-1-81"><a href="#__codelineno-1-81" id="__codelineno-1-81" name="__codelineno-1-81"></a>        <span class="n">best_response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantum_measurement_collapse</span><span class="p">(</span>
+</span><span id="__span-1-82"><a href="#__codelineno-1-82" id="__codelineno-1-82" name="__codelineno-1-82"></a>            <span class="n">optimized_responses</span><span class="p">,</span>
+</span><span id="__span-1-83"><a href="#__codelineno-1-83" id="__codelineno-1-83" name="__codelineno-1-83"></a>            <span class="n">measurement_criteria</span><span class="o">=</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"criteria"</span><span class="p">,</span> <span class="s2">"quality"</span><span class="p">)</span>
+</span><span id="__span-1-84"><a href="#__codelineno-1-84" id="__codelineno-1-84" name="__codelineno-1-84"></a>        <span class="p">)</span>
+</span><span id="__span-1-85"><a href="#__codelineno-1-85" id="__codelineno-1-85" name="__codelineno-1-85"></a>
+</span><span id="__span-1-86"><a href="#__codelineno-1-86" id="__codelineno-1-86" name="__codelineno-1-86"></a>        <span class="k">return</span> <span class="n">best_response</span>
+</span></code></pre></div>
+<h3 id="adaptive-response-processing">Adaptive Response Processing<a class="headerlink" href="#adaptive-response-processing" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveResponseProcessor</span><span class="p">:</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">adaptation_engine</span> <span class="o">=</span> <span class="n">ResponseAdaptationEngine</span><span class="p">()</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">user_profiler</span> <span class="o">=</span> <span class="n">UserProfiler</span><span class="p">()</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">context_analyzer</span> <span class="o">=</span> <span class="n">ContextAnalyzer</span><span class="p">()</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">style_predictor</span> <span class="o">=</span> <span class="n">StylePredictor</span><span class="p">()</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_response_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">user_profile</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="sd">"""Process response adaptively based on user and context."""</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>        <span class="c1"># Analyze user preferences</span>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="n">user_preferences</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_profiler</span><span class="o">.</span><span class="n">analyze_preferences</span><span class="p">(</span>
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>            <span class="n">user_profile</span>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>        <span class="p">)</span>
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>        <span class="c1"># Analyze contextual requirements</span>
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>        <span class="n">contextual_needs</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">context_analyzer</span><span class="o">.</span><span class="n">analyze_context</span><span class="p">(</span>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>            <span class="n">context</span>
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>        <span class="p">)</span>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>        <span class="c1"># Predict optimal style</span>
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>        <span class="n">optimal_style</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">style_predictor</span><span class="o">.</span><span class="n">predict_style</span><span class="p">(</span>
+</span><span id="__span-2-22"><a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>            <span class="n">user_preferences</span><span class="p">,</span> <span class="n">contextual_needs</span>
+</span><span id="__span-2-23"><a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>        <span class="p">)</span>
+</span><span id="__span-2-24"><a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>        <span class="c1"># Adapt response processing</span>
+</span><span id="__span-2-26"><a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>        <span class="n">adapted_response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">adaptation_engine</span><span class="o">.</span><span class="n">adapt_response</span><span class="p">(</span>
+</span><span id="__span-2-27"><a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>            <span class="n">response</span><span class="p">,</span>
+</span><span id="__span-2-28"><a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>            <span class="n">user_preferences</span><span class="o">=</span><span class="n">user_preferences</span><span class="p">,</span>
+</span><span id="__span-2-29"><a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>            <span class="n">contextual_needs</span><span class="o">=</span><span class="n">contextual_needs</span><span class="p">,</span>
+</span><span id="__span-2-30"><a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>            <span class="n">target_style</span><span class="o">=</span><span class="n">optimal_style</span>
+</span><span id="__span-2-31"><a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>        <span class="p">)</span>
+</span><span id="__span-2-32"><a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>
+</span><span id="__span-2-33"><a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>        <span class="k">return</span> <span class="n">adapted_response</span>
+</span><span id="__span-2-34"><a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>
+</span><span id="__span-2-35"><a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">real_time_adaptation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_stream</span><span class="p">,</span> <span class="n">feedback_stream</span><span class="p">):</span>
+</span><span id="__span-2-36"><a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">        </span><span class="sd">"""Adapt response processing in real-time based on feedback."""</span>
+</span><span id="__span-2-37"><a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>        <span class="n">processed_responses</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-2-38"><a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>
+</span><span id="__span-2-39"><a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a>        <span class="k">async</span> <span class="k">for</span> <span class="n">response_chunk</span> <span class="ow">in</span> <span class="n">response_stream</span><span class="p">:</span>
+</span><span id="__span-2-40"><a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a>            <span class="c1"># Check for real-time feedback</span>
+</span><span id="__span-2-41"><a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a>            <span class="n">recent_feedback</span> <span class="o">=</span> <span class="k">await</span> <span class="n">feedback_stream</span><span class="o">.</span><span class="n">get_recent_feedback</span><span class="p">()</span>
+</span><span id="__span-2-42"><a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>
+</span><span id="__span-2-43"><a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a>            <span class="c1"># Adapt processing based on feedback</span>
+</span><span id="__span-2-44"><a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>            <span class="k">if</span> <span class="n">recent_feedback</span><span class="p">:</span>
+</span><span id="__span-2-45"><a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a>                <span class="n">adaptation_adjustments</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_adaptation_adjustments</span><span class="p">(</span>
+</span><span id="__span-2-46"><a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a>                    <span class="n">recent_feedback</span>
+</span><span id="__span-2-47"><a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a>                <span class="p">)</span>
+</span><span id="__span-2-48"><a href="#__codelineno-2-48" id="__codelineno-2-48" name="__codelineno-2-48"></a>                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">adaptation_engine</span><span class="o">.</span><span class="n">apply_real_time_adjustments</span><span class="p">(</span>
+</span><span id="__span-2-49"><a href="#__codelineno-2-49" id="__codelineno-2-49" name="__codelineno-2-49"></a>                    <span class="n">adaptation_adjustments</span>
+</span><span id="__span-2-50"><a href="#__codelineno-2-50" id="__codelineno-2-50" name="__codelineno-2-50"></a>                <span class="p">)</span>
+</span><span id="__span-2-51"><a href="#__codelineno-2-51" id="__codelineno-2-51" name="__codelineno-2-51"></a>
+</span><span id="__span-2-52"><a href="#__codelineno-2-52" id="__codelineno-2-52" name="__codelineno-2-52"></a>            <span class="c1"># Process chunk with current adaptations</span>
+</span><span id="__span-2-53"><a href="#__codelineno-2-53" id="__codelineno-2-53" name="__codelineno-2-53"></a>            <span class="n">processed_chunk</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">adaptation_engine</span><span class="o">.</span><span class="n">process_chunk</span><span class="p">(</span>
+</span><span id="__span-2-54"><a href="#__codelineno-2-54" id="__codelineno-2-54" name="__codelineno-2-54"></a>                <span class="n">response_chunk</span>
+</span><span id="__span-2-55"><a href="#__codelineno-2-55" id="__codelineno-2-55" name="__codelineno-2-55"></a>            <span class="p">)</span>
+</span><span id="__span-2-56"><a href="#__codelineno-2-56" id="__codelineno-2-56" name="__codelineno-2-56"></a>
+</span><span id="__span-2-57"><a href="#__codelineno-2-57" id="__codelineno-2-57" name="__codelineno-2-57"></a>            <span class="n">processed_responses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">processed_chunk</span><span class="p">)</span>
+</span><span id="__span-2-58"><a href="#__codelineno-2-58" id="__codelineno-2-58" name="__codelineno-2-58"></a>
+</span><span id="__span-2-59"><a href="#__codelineno-2-59" id="__codelineno-2-59" name="__codelineno-2-59"></a>        <span class="k">return</span> <span class="n">processed_responses</span>
+</span></code></pre></div>
+<h2 id="response-types">🎯 Response Types<a class="headerlink" href="#response-types" title="Permanent link">¶</a></h2>
+<h3 id="response-categories">Response Categories<a class="headerlink" href="#response-categories" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Content Types"
+        A[Informational]
+        B[Instructional]
+        C[Conversational]
+        D[Creative]
+    end
+
+    subgraph "Format Types"
+        E[Text]
+        F[Markdown]
+        G[HTML]
+        H[JSON]
+    end
+
+    subgraph "Style Types"
+        I[Professional]
+        J[Casual]
+        K[Technical]
+        L[Academic]
+    end
+
+    subgraph "Delivery Types"
+        M[Immediate]
+        N[Streaming]
+        O[Batched]
+        P[Progressive]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L
+
+    I --&gt; M
+    J --&gt; N
+    K --&gt; O
+    L --&gt; P</code></pre>
+<h3 id="response-processing-pipeline">Response Processing Pipeline<a class="headerlink" href="#response-processing-pipeline" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">ResponseProcessingPipeline</span><span class="p">:</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">stages</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>            <span class="s2">"preprocessing"</span><span class="p">:</span> <span class="n">PreprocessingStage</span><span class="p">(),</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>            <span class="s2">"content_enhancement"</span><span class="p">:</span> <span class="n">ContentEnhancementStage</span><span class="p">(),</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>            <span class="s2">"structure_optimization"</span><span class="p">:</span> <span class="n">StructureOptimizationStage</span><span class="p">(),</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>            <span class="s2">"format_conversion"</span><span class="p">:</span> <span class="n">FormatConversionStage</span><span class="p">(),</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>            <span class="s2">"quality_assurance"</span><span class="p">:</span> <span class="n">QualityAssuranceStage</span><span class="p">(),</span>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a>            <span class="s2">"postprocessing"</span><span class="p">:</span> <span class="n">PostprocessingStage</span><span class="p">()</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>        <span class="p">}</span>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">process_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_response</span><span class="p">,</span> <span class="n">processing_config</span><span class="p">):</span>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="sd">"""Process response through configurable pipeline."""</span>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a>        <span class="n">current_response</span> <span class="o">=</span> <span class="n">raw_response</span>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a>        <span class="n">processing_metadata</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>        <span class="c1"># Select active stages based on config</span>
+</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a>        <span class="n">active_stages</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_active_stages</span><span class="p">(</span><span class="n">processing_config</span><span class="p">)</span>
+</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a>        <span class="k">for</span> <span class="n">stage_name</span> <span class="ow">in</span> <span class="n">active_stages</span><span class="p">:</span>
+</span><span id="__span-3-21"><a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a>            <span class="n">stage</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stages</span><span class="p">[</span><span class="n">stage_name</span><span class="p">]</span>
+</span><span id="__span-3-22"><a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a>            <span class="c1"># Configure stage for current processing</span>
+</span><span id="__span-3-24"><a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a>            <span class="k">await</span> <span class="n">stage</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">processing_config</span><span class="p">)</span>
+</span><span id="__span-3-25"><a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a>
+</span><span id="__span-3-26"><a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a>            <span class="c1"># Process response through stage</span>
+</span><span id="__span-3-27"><a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a>            <span class="n">stage_result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">stage</span><span class="o">.</span><span class="n">process</span><span class="p">(</span>
+</span><span id="__span-3-28"><a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a>                <span class="n">current_response</span><span class="p">,</span>
+</span><span id="__span-3-29"><a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a>                <span class="n">processing_metadata</span>
+</span><span id="__span-3-30"><a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a>            <span class="p">)</span>
+</span><span id="__span-3-31"><a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a>            <span class="n">current_response</span> <span class="o">=</span> <span class="n">stage_result</span><span class="o">.</span><span class="n">response</span>
+</span><span id="__span-3-33"><a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a>            <span class="n">processing_metadata</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">stage_result</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
+</span><span id="__span-3-34"><a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a>
+</span><span id="__span-3-35"><a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a>            <span class="c1"># Quality check after each stage</span>
+</span><span id="__span-3-36"><a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="k">await</span> <span class="n">stage</span><span class="o">.</span><span class="n">validate_output</span><span class="p">(</span><span class="n">current_response</span><span class="p">):</span>
+</span><span id="__span-3-37"><a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a>                <span class="c1"># Handle processing error</span>
+</span><span id="__span-3-38"><a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a>                <span class="n">fallback_response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">stage</span><span class="o">.</span><span class="n">get_fallback_response</span><span class="p">(</span>
+</span><span id="__span-3-39"><a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a>                    <span class="n">raw_response</span>
+</span><span id="__span-3-40"><a href="#__codelineno-3-40" id="__codelineno-3-40" name="__codelineno-3-40"></a>                <span class="p">)</span>
+</span><span id="__span-3-41"><a href="#__codelineno-3-41" id="__codelineno-3-41" name="__codelineno-3-41"></a>                <span class="n">current_response</span> <span class="o">=</span> <span class="n">fallback_response</span>
+</span><span id="__span-3-42"><a href="#__codelineno-3-42" id="__codelineno-3-42" name="__codelineno-3-42"></a>
+</span><span id="__span-3-43"><a href="#__codelineno-3-43" id="__codelineno-3-43" name="__codelineno-3-43"></a>        <span class="k">return</span> <span class="n">ProcessedResponse</span><span class="p">(</span>
+</span><span id="__span-3-44"><a href="#__codelineno-3-44" id="__codelineno-3-44" name="__codelineno-3-44"></a>            <span class="n">content</span><span class="o">=</span><span class="n">current_response</span><span class="p">,</span>
+</span><span id="__span-3-45"><a href="#__codelineno-3-45" id="__codelineno-3-45" name="__codelineno-3-45"></a>            <span class="n">metadata</span><span class="o">=</span><span class="n">processing_metadata</span><span class="p">,</span>
+</span><span id="__span-3-46"><a href="#__codelineno-3-46" id="__codelineno-3-46" name="__codelineno-3-46"></a>            <span class="n">quality_score</span><span class="o">=</span><span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_quality_score</span><span class="p">(</span><span class="n">current_response</span><span class="p">)</span>
+</span><span id="__span-3-47"><a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a>        <span class="p">)</span>
+</span><span id="__span-3-48"><a href="#__codelineno-3-48" id="__codelineno-3-48" name="__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a href="#__codelineno-3-49" id="__codelineno-3-49" name="__codelineno-3-49"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">batch_process_responses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">responses</span><span class="p">,</span> <span class="n">shared_config</span><span class="p">):</span>
+</span><span id="__span-3-50"><a href="#__codelineno-3-50" id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">        </span><span class="sd">"""Process multiple responses efficiently."""</span>
+</span><span id="__span-3-51"><a href="#__codelineno-3-51" id="__codelineno-3-51" name="__codelineno-3-51"></a>        <span class="c1"># Optimize pipeline for batch processing</span>
+</span><span id="__span-3-52"><a href="#__codelineno-3-52" id="__codelineno-3-52" name="__codelineno-3-52"></a>        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimize_for_batch_processing</span><span class="p">()</span>
+</span><span id="__span-3-53"><a href="#__codelineno-3-53" id="__codelineno-3-53" name="__codelineno-3-53"></a>
+</span><span id="__span-3-54"><a href="#__codelineno-3-54" id="__codelineno-3-54" name="__codelineno-3-54"></a>        <span class="c1"># Process responses in parallel where possible</span>
+</span><span id="__span-3-55"><a href="#__codelineno-3-55" id="__codelineno-3-55" name="__codelineno-3-55"></a>        <span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-3-56"><a href="#__codelineno-3-56" id="__codelineno-3-56" name="__codelineno-3-56"></a>        <span class="k">for</span> <span class="n">response</span> <span class="ow">in</span> <span class="n">responses</span><span class="p">:</span>
+</span><span id="__span-3-57"><a href="#__codelineno-3-57" id="__codelineno-3-57" name="__codelineno-3-57"></a>            <span class="n">task</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">shared_config</span><span class="p">)</span>
+</span><span id="__span-3-58"><a href="#__codelineno-3-58" id="__codelineno-3-58" name="__codelineno-3-58"></a>            <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+</span><span id="__span-3-59"><a href="#__codelineno-3-59" id="__codelineno-3-59" name="__codelineno-3-59"></a>
+</span><span id="__span-3-60"><a href="#__codelineno-3-60" id="__codelineno-3-60" name="__codelineno-3-60"></a>        <span class="n">processed_responses</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
+</span><span id="__span-3-61"><a href="#__codelineno-3-61" id="__codelineno-3-61" name="__codelineno-3-61"></a>
+</span><span id="__span-3-62"><a href="#__codelineno-3-62" id="__codelineno-3-62" name="__codelineno-3-62"></a>        <span class="k">return</span> <span class="n">processed_responses</span>
+</span></code></pre></div>
+<h2 id="quality-metrics">📊 Quality Metrics<a class="headerlink" href="#quality-metrics" title="Permanent link">¶</a></h2>
+<h3 id="response-quality-assessment">Response Quality Assessment<a class="headerlink" href="#response-quality-assessment" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "Content Quality"
+        A[Accuracy]
+        B[Completeness]
+        C[Relevance]
+        D[Clarity]
+    end
+
+    subgraph "Technical Quality"
+        E[Format Compliance]
+        F[Structure Quality]
+        G[Processing Efficiency]
+        H[Error Rate]
+    end
+
+    subgraph "User Experience"
+        I[Readability]
+        J[Engagement]
+        K[Satisfaction]
+        L[Usability]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h3 id="quality-enhancement-system">Quality Enhancement System<a class="headerlink" href="#quality-enhancement-system" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QualityEnhancementSystem</span><span class="p">:</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">quality_analyzers</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>            <span class="s2">"content"</span><span class="p">:</span> <span class="n">ContentQualityAnalyzer</span><span class="p">(),</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="s2">"structure"</span><span class="p">:</span> <span class="n">StructureQualityAnalyzer</span><span class="p">(),</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="s2">"language"</span><span class="p">:</span> <span class="n">LanguageQualityAnalyzer</span><span class="p">(),</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>            <span class="s2">"format"</span><span class="p">:</span> <span class="n">FormatQualityAnalyzer</span><span class="p">(),</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>            <span class="s2">"user_experience"</span><span class="p">:</span> <span class="n">UXQualityAnalyzer</span><span class="p">()</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>        <span class="p">}</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">enhancement_engines</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>            <span class="s2">"content"</span><span class="p">:</span> <span class="n">ContentEnhancementEngine</span><span class="p">(),</span>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>            <span class="s2">"structure"</span><span class="p">:</span> <span class="n">StructureEnhancementEngine</span><span class="p">(),</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>            <span class="s2">"language"</span><span class="p">:</span> <span class="n">LanguageEnhancementEngine</span><span class="p">(),</span>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>            <span class="s2">"format"</span><span class="p">:</span> <span class="n">FormatEnhancementEngine</span><span class="p">(),</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>            <span class="s2">"user_experience"</span><span class="p">:</span> <span class="n">UXEnhancementEngine</span><span class="p">()</span>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>        <span class="p">}</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">enhance_response_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">target_quality</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="sd">"""Enhance response quality to meet target threshold."""</span>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>        <span class="n">current_response</span> <span class="o">=</span> <span class="n">response</span>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>        <span class="n">enhancement_iterations</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>        <span class="n">max_iterations</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>        <span class="k">while</span> <span class="n">enhancement_iterations</span> <span class="o">&lt;</span> <span class="n">max_iterations</span><span class="p">:</span>
+</span><span id="__span-4-26"><a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>            <span class="c1"># Analyze current quality</span>
+</span><span id="__span-4-27"><a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>            <span class="n">quality_scores</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">analyze_quality</span><span class="p">(</span><span class="n">current_response</span><span class="p">)</span>
+</span><span id="__span-4-28"><a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>            <span class="c1"># Calculate overall quality score</span>
+</span><span id="__span-4-30"><a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>            <span class="n">overall_quality</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">quality_scores</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">quality_scores</span><span class="p">)</span>
+</span><span id="__span-4-31"><a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>
+</span><span id="__span-4-32"><a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>            <span class="k">if</span> <span class="n">overall_quality</span> <span class="o">&gt;=</span> <span class="n">target_quality</span><span class="p">:</span>
+</span><span id="__span-4-33"><a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>                <span class="k">break</span>
+</span><span id="__span-4-34"><a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>
+</span><span id="__span-4-35"><a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>            <span class="c1"># Identify areas needing improvement</span>
+</span><span id="__span-4-36"><a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a>            <span class="n">improvement_areas</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-4-37"><a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a>                <span class="n">area</span> <span class="k">for</span> <span class="n">area</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">quality_scores</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</span><span id="__span-4-38"><a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a>                <span class="k">if</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="n">target_quality</span>
+</span><span id="__span-4-39"><a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a>            <span class="p">]</span>
+</span><span id="__span-4-40"><a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>
+</span><span id="__span-4-41"><a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a>            <span class="c1"># Apply targeted enhancements</span>
+</span><span id="__span-4-42"><a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a>            <span class="k">for</span> <span class="n">area</span> <span class="ow">in</span> <span class="n">improvement_areas</span><span class="p">:</span>
+</span><span id="__span-4-43"><a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a>                <span class="n">enhancer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enhancement_engines</span><span class="p">[</span><span class="n">area</span><span class="p">]</span>
+</span><span id="__span-4-44"><a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a>                <span class="n">current_response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">enhancer</span><span class="o">.</span><span class="n">enhance</span><span class="p">(</span>
+</span><span id="__span-4-45"><a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a>                    <span class="n">current_response</span><span class="p">,</span>
+</span><span id="__span-4-46"><a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a>                    <span class="n">target_score</span><span class="o">=</span><span class="n">target_quality</span>
+</span><span id="__span-4-47"><a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a>                <span class="p">)</span>
+</span><span id="__span-4-48"><a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a>
+</span><span id="__span-4-49"><a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>            <span class="n">enhancement_iterations</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span id="__span-4-50"><a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a>
+</span><span id="__span-4-51"><a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a>        <span class="k">return</span> <span class="n">current_response</span>
+</span><span id="__span-4-52"><a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a>
+</span><span id="__span-4-53"><a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">continuous_quality_improvement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feedback_data</span><span class="p">):</span>
+</span><span id="__span-4-54"><a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">        </span><span class="sd">"""Continuously improve quality based on user feedback."""</span>
+</span><span id="__span-4-55"><a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a>        <span class="c1"># Analyze feedback patterns</span>
+</span><span id="__span-4-56"><a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a>        <span class="n">feedback_patterns</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">analyze_feedback_patterns</span><span class="p">(</span><span class="n">feedback_data</span><span class="p">)</span>
+</span><span id="__span-4-57"><a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a>
+</span><span id="__span-4-58"><a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a>        <span class="c1"># Identify systematic quality issues</span>
+</span><span id="__span-4-59"><a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a>        <span class="n">quality_issues</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">identify_quality_issues</span><span class="p">(</span><span class="n">feedback_patterns</span><span class="p">)</span>
+</span><span id="__span-4-60"><a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a>
+</span><span id="__span-4-61"><a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a>        <span class="c1"># Update enhancement algorithms</span>
+</span><span id="__span-4-62"><a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a>        <span class="k">for</span> <span class="n">issue</span> <span class="ow">in</span> <span class="n">quality_issues</span><span class="p">:</span>
+</span><span id="__span-4-63"><a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a>            <span class="n">affected_enhancer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enhancement_engines</span><span class="p">[</span><span class="n">issue</span><span class="o">.</span><span class="n">area</span><span class="p">]</span>
+</span><span id="__span-4-64"><a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a>            <span class="k">await</span> <span class="n">affected_enhancer</span><span class="o">.</span><span class="n">update_algorithms</span><span class="p">(</span><span class="n">issue</span><span class="o">.</span><span class="n">improvement_data</span><span class="p">)</span>
+</span><span id="__span-4-65"><a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a>
+</span><span id="__span-4-66"><a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a>        <span class="c1"># Retrain quality analyzers</span>
+</span><span id="__span-4-67"><a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a>        <span class="k">for</span> <span class="n">analyzer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">quality_analyzers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span><span id="__span-4-68"><a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a>            <span class="k">await</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">retrain_with_feedback</span><span class="p">(</span><span class="n">feedback_data</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="license-integration">🔒 License Integration<a class="headerlink" href="#license-integration" title="Permanent link">¶</a></h2>
+<h3 id="response-processing-restrictions">Response Processing Restrictions<a class="headerlink" href="#response-processing-restrictions" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph LR
+    subgraph "License Tiers"
+        A[Basic - Simple Processing]
+        B[Professional - Advanced Processing]
+        C[Enterprise - Full Processing]
+        D[Research - Experimental Processing]
+    end
+
+    subgraph "Features"
+        E[Basic Enhancement]
+        F[Quantum Processing]
+        G[Real-time Adaptation]
+        H[Research Features]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H</code></pre>
+<h3 id="license-enforcement">License Enforcement<a class="headerlink" href="#license-enforcement" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">quantumlangchain.licensing</span><span class="w"> </span><span class="kn">import</span> <span class="n">requires_license</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumResponseProcessor</span><span class="p">(</span><span class="n">LicensedComponent</span><span class="p">):</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nd">@requires_license</span><span class="p">(</span><span class="n">tier</span><span class="o">=</span><span class="s2">"basic"</span><span class="p">)</span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="sd">"""Initialize with license validation."""</span>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>            <span class="n">required_features</span><span class="o">=</span><span class="p">[</span><span class="s2">"response_processing"</span><span class="p">],</span>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>            <span class="n">required_tier</span><span class="o">=</span><span class="s2">"basic"</span>
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>        <span class="p">)</span>
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>        <span class="c1"># Validate processing capabilities</span>
+</span><span id="__span-5-13"><a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a>        <span class="n">max_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_max_response_length</span><span class="p">()</span>
+</span><span id="__span-5-14"><a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>        <span class="n">requested_length</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"max_response_length"</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</span><span id="__span-5-15"><a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a>        <span class="k">if</span> <span class="n">requested_length</span> <span class="o">&gt;</span> <span class="n">max_length</span><span class="p">:</span>
+</span><span id="__span-5-17"><a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>            <span class="k">raise</span> <span class="n">LicenseError</span><span class="p">(</span>
+</span><span id="__span-5-18"><a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a>                <span class="sa">f</span><span class="s2">"Response length limit exceeded. "</span>
+</span><span id="__span-5-19"><a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a>                <span class="sa">f</span><span class="s2">"License allows </span><span class="si">{</span><span class="n">max_length</span><span class="si">}</span><span class="s2"> tokens, "</span>
+</span><span id="__span-5-20"><a href="#__codelineno-5-20" id="__codelineno-5-20" name="__codelineno-5-20"></a>                <span class="sa">f</span><span class="s2">"requested </span><span class="si">{</span><span class="n">requested_length</span><span class="si">}</span><span class="s2">. "</span>
+</span><span id="__span-5-21"><a href="#__codelineno-5-21" id="__codelineno-5-21" name="__codelineno-5-21"></a>                <span class="sa">f</span><span class="s2">"Contact: bajpaikrishna715@gmail.com"</span>
+</span><span id="__span-5-22"><a href="#__codelineno-5-22" id="__codelineno-5-22" name="__codelineno-5-22"></a>            <span class="p">)</span>
+</span><span id="__span-5-23"><a href="#__codelineno-5-23" id="__codelineno-5-23" name="__codelineno-5-23"></a>
+</span><span id="__span-5-24"><a href="#__codelineno-5-24" id="__codelineno-5-24" name="__codelineno-5-24"></a>    <span class="nd">@requires_license</span><span class="p">(</span><span class="n">tier</span><span class="o">=</span><span class="s2">"professional"</span><span class="p">)</span>
+</span><span id="__span-5-25"><a href="#__codelineno-5-25" id="__codelineno-5-25" name="__codelineno-5-25"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">enable_quantum_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-26"><a href="#__codelineno-5-26" id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">        </span><span class="sd">"""Enable quantum response processing (Professional+ only)."""</span>
+</span><span id="__span-5-27"><a href="#__codelineno-5-27" id="__codelineno-5-27" name="__codelineno-5-27"></a>        <span class="k">pass</span>
+</span><span id="__span-5-28"><a href="#__codelineno-5-28" id="__codelineno-5-28" name="__codelineno-5-28"></a>
+</span><span id="__span-5-29"><a href="#__codelineno-5-29" id="__codelineno-5-29" name="__codelineno-5-29"></a>    <span class="nd">@requires_license</span><span class="p">(</span><span class="n">tier</span><span class="o">=</span><span class="s2">"enterprise"</span><span class="p">)</span>
+</span><span id="__span-5-30"><a href="#__codelineno-5-30" id="__codelineno-5-30" name="__codelineno-5-30"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">enable_real_time_adaptation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-31"><a href="#__codelineno-5-31" id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">        </span><span class="sd">"""Enable real-time adaptation (Enterprise+ only)."""</span>
+</span><span id="__span-5-32"><a href="#__codelineno-5-32" id="__codelineno-5-32" name="__codelineno-5-32"></a>        <span class="k">pass</span>
+</span><span id="__span-5-33"><a href="#__codelineno-5-33" id="__codelineno-5-33" name="__codelineno-5-33"></a>
+</span><span id="__span-5-34"><a href="#__codelineno-5-34" id="__codelineno-5-34" name="__codelineno-5-34"></a>    <span class="nd">@requires_license</span><span class="p">(</span><span class="n">tier</span><span class="o">=</span><span class="s2">"research"</span><span class="p">)</span>
+</span><span id="__span-5-35"><a href="#__codelineno-5-35" id="__codelineno-5-35" name="__codelineno-5-35"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">enable_experimental_features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-36"><a href="#__codelineno-5-36" id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">        </span><span class="sd">"""Enable experimental processing features (Research only)."""</span>
+</span><span id="__span-5-37"><a href="#__codelineno-5-37" id="__codelineno-5-37" name="__codelineno-5-37"></a>        <span class="k">pass</span>
+</span></code></pre></div>
+<h2 id="api-reference">📚 API Reference<a class="headerlink" href="#api-reference" title="Permanent link">¶</a></h2>
+<h3 id="core-response-classes">Core Response Classes<a class="headerlink" href="#core-response-classes" title="Permanent link">¶</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">QuantumResponseProcessor</span><span class="p">:</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_response_length</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">quality_threshold</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="o">**</span><span class="n">config</span><span class="p">):</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">        </span><span class="sd">"""Initialize quantum response processor."""</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">process_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_response</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">target_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"text"</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ProcessedResponse</span><span class="p">:</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="sd">"""Process a raw response."""</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">batch_process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">responses</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">shared_config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ProcessedResponse</span><span class="p">]:</span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="sd">"""Process multiple responses in batch."""</span>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">stream_process</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_stream</span><span class="p">:</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">ProcessedResponse</span><span class="p">]:</span>
+</span><span id="__span-6-12"><a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="sd">"""Process streaming response."""</span>
+</span><span id="__span-6-13"><a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_processing_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+</span><span id="__span-6-15"><a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">        </span><span class="sd">"""Get response processing statistics."""</span>
+</span><span id="__span-6-16"><a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="k">class</span><span class="w"> </span><span class="nc">ProcessedResponse</span><span class="p">:</span>
+</span><span id="__span-6-18"><a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">quality_score</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">processing_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="o">**</span><span class="n">metadata</span><span class="p">):</span>
+</span><span id="__span-6-19"><a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">        </span><span class="sd">"""Initialize processed response."""</span>
+</span><span id="__span-6-20"><a href="#__codelineno-6-20" id="__codelineno-6-20" name="__codelineno-6-20"></a>
+</span><span id="__span-6-21"><a href="#__codelineno-6-21" id="__codelineno-6-21" name="__codelineno-6-21"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+</span><span id="__span-6-22"><a href="#__codelineno-6-22" id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">        </span><span class="sd">"""Convert response to dictionary."""</span>
+</span><span id="__span-6-23"><a href="#__codelineno-6-23" id="__codelineno-6-23" name="__codelineno-6-23"></a>
+</span><span id="__span-6-24"><a href="#__codelineno-6-24" id="__codelineno-6-24" name="__codelineno-6-24"></a>    <span class="nd">@classmethod</span>
+</span><span id="__span-6-25"><a href="#__codelineno-6-25" id="__codelineno-6-25" name="__codelineno-6-25"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s1">'ProcessedResponse'</span><span class="p">:</span>
+</span><span id="__span-6-26"><a href="#__codelineno-6-26" id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">        </span><span class="sd">"""Create response from dictionary."""</span>
+</span></code></pre></div>
+<h2 id="future-enhancements">🔮 Future Enhancements<a class="headerlink" href="#future-enhancements" title="Permanent link">¶</a></h2>
+<h3 id="planned-response-features">Planned Response Features<a class="headerlink" href="#planned-response-features" title="Permanent link">¶</a></h3>
+<pre class="mermaid"><code>graph TB
+    subgraph "Near Future"
+        A[Better Quality Control]
+        B[Faster Processing]
+        C[Enhanced Formats]
+        D[Improved Adaptation]
+    end
+
+    subgraph "Medium Term"
+        E[Self-Optimizing Processing]
+        F[Predictive Enhancement]
+        G[Quantum Response Networks]
+        H[Adaptive Learning]
+    end
+
+    subgraph "Long Term"
+        I[Conscious Response Generation]
+        J[Universal Format Support]
+        K[Quantum Response Evolution]
+        L[AGI-Level Processing]
+    end
+
+    A --&gt; E
+    B --&gt; F
+    C --&gt; G
+    D --&gt; H
+
+    E --&gt; I
+    F --&gt; J
+    G --&gt; K
+    H --&gt; L</code></pre>
+<h2 id="license-requirements">🔐 License Requirements<a class="headerlink" href="#license-requirements" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Basic Processing</strong>: Basic license tier (simple response processing)</li>
+<li><strong>Professional Processing</strong>: Professional license tier (quantum enhancement)</li>
+<li><strong>Enterprise Processing</strong>: Enterprise license tier (real-time adaptation)</li>
+<li><strong>Research Processing</strong>: Research license tier (experimental features)</li>
+</ul>
+<p>Contact <a href="mailto:bajpaikrishna715@gmail.com">bajpaikrishna715@gmail.com</a> for licensing.</p>
+<p>Response Processor provides quantum-enhanced response processing and optimization capabilities for superior AI output quality.</p>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      © 2025 Krishna Bajpai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/krish567366/Quantum-Langchain" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</a>
+<a class="md-social__link" href="https://pypi.org/project/quantumlangchain/" rel="noopener" target="_blank" title="pypi.org">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6M286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3M167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4m-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3"></path></svg>
+</a>
+<a class="md-social__link" href="mailto:bajpaikrishna715@gmail.com" rel="noopener" target="_blank" title="">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-consent" data-md-component="consent" hidden="" id="__consent">
+<div class="md-consent__overlay"></div>
+<aside class="md-consent__inner">
+<form class="md-consent__form md-grid md-typeset" name="consent">
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" id="__settings" type="checkbox"/>
+<div class="md-consent__settings">
+<ul class="task-list">
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="analytics" type="checkbox"/>
+<span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+</li>
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="github" type="checkbox"/>
+<span class="task-list-indicator"></span>
+      GitHub
+    </label>
+</li>
+</ul>
+</div>
+<div class="md-consent__controls">
+<button class="md-button md-button--primary">Accept</button>
+<label class="md-button" for="__settings">Manage settings</label>
+</div>
+</form>
+</aside>
+</div>
+<script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+<script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

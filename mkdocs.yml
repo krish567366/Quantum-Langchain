@@ -158,6 +158,7 @@ nav:
       - Configuration: getting-started/configuration.md
   - Theory & Architecture:
       - Complete Theory: theory-architecture.md
+      - System Architecture: concepts/architecture.md
       - Quantum Computing Basics: concepts/quantum-basics.md
       - Quantum Computing: concepts/quantum-computing.md
       - Quantum-Classical Hybrid Systems: concepts/hybrid-systems.md
@@ -169,6 +170,7 @@ nav:
       - QuantumMemory: modules/quantum-memory.md
       - EntangledAgents: modules/entangled-agents.md
       - QuantumRetriever: modules/quantum-retriever.md
+      - ResponseProcessor: modules/response-processor.md
       - QuantumToolExecutor: modules/tool-executor.md
       - QuantumChain: modules/quantum-chains.md
       - QPromptChain: modules/prompt-chain.md
@@ -187,9 +189,12 @@ nav:
   - User Guide: user-guide.md
   - Examples: examples.md
   - Best Practices: best-practices.md
+  - Architecture: architecture.md
+  - Getting Started Guide: getting-started.md
   - Deployment: deployment.md
   - Tutorials: tutorials.md
   - API Reference:
+      - API Index: api/index.md
       - Complete API: api/overview.md
       - Core: api/core.md
       - Chains: api/chains.md
